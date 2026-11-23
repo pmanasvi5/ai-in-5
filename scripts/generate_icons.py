@@ -42,6 +42,9 @@ def make_icon(size: int, maskable: bool = False) -> Image.Image:
     return img.resize((size, size), Image.LANCZOS)
 
 
+DESKTOP_DIR = Path(__file__).resolve().parent.parent / "electron" / "build"
+
+
 def main():
     for size in (192, 512):
         make_icon(size).save(OUT_DIR / f"icon-{size}.png")
@@ -49,6 +52,19 @@ def main():
     make_icon(32).save(OUT_DIR / "icon-32.png")
     make_icon(180).save(OUT_DIR / "icon-180.png")  # apple-touch-icon
     print("Icons written to", OUT_DIR)
+
+    # Desktop app icons (electron-builder looks for electron/build/icon.png
+    # and generates .icns/.ico from it, but .ico needs multiple embedded
+    # sizes to look right in Windows' taskbar/Explorer, so write that
+    # ourselves with Pillow; .icns is built separately via iconutil).
+    DESKTOP_DIR.mkdir(parents=True, exist_ok=True)
+    base = make_icon(1024)
+    base.save(DESKTOP_DIR / "icon.png")
+    base.save(
+        DESKTOP_DIR / "icon.ico",
+        sizes=[(16, 16), (32, 32), (48, 48), (64, 64), (128, 128), (256, 256)],
+    )
+    print("Desktop icons written to", DESKTOP_DIR)
 
 
 if __name__ == "__main__":

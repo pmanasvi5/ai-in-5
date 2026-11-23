@@ -10,6 +10,8 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
+dist-electron-web
+release
 *.local
 
 # Pipeline intermediate artifacts (scripts/*.py write these to the cwd when run)
