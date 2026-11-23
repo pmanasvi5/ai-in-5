@@ -47,6 +47,7 @@ term at a time, with no repeats once you've learned something.
 | Layer | Choice | Why |
 |---|---|---|
 | Frontend | React + TypeScript + Vite + Tailwind CSS | Fast dev loop, small production bundle, strong typing for a data-shaped app like this. |
+| Desktop app | Electron + electron-builder | Wraps the same web build as a real installable app for Mac/Windows, free, no App Store needed. |
 | Icons | lucide-react | Free, consistent icon set. |
 | Routing | react-router-dom (`HashRouter`) | Hash-based routing works correctly on GitHub Pages' static hosting without extra server config or 404 redirects. |
 | News pipeline | Python (`feedparser`, `requests`) | Simple, dependency-light RSS fetching and parsing. |
@@ -198,25 +199,48 @@ You can also trigger it manually any time from the **Actions** tab
 
 ## Installing the app
 
+### Mac or Windows — real downloadable desktop app
+**[Download the latest release](https://github.com/pmanasvi5/ai-in-5/releases/latest)**
+— a native desktop app (built with Electron), not just a bookmark. Pick the
+installer for your OS:
+- **Mac**: `AI-in-5-<version>.dmg` (Intel) or `AI-in-5-<version>-arm64.dmg` (Apple Silicon)
+- **Windows**: `AI-in-5-Setup-<version>.exe`
+
+It's unsigned (a paid Apple/Microsoft developer certificate would be needed
+to remove this warning, which conflicts with the $0 budget), so the OS will
+warn about an unidentified publisher the first time:
+- **Mac**: right-click the app → **Open** → confirm.
+- **Windows**: SmartScreen → **More info** → **Run anyway**.
+
+This is expected for any free, independently-distributed desktop app and is
+not a sign of a problem. These installers are built fresh for each tagged
+release by `.github/workflows/build-desktop-apps.yml`, running natively on
+GitHub's own macOS and Windows runners (no cross-compilation hacks).
+
 ### iPhone (Safari)
-1. Open the site in Safari.
+Apple does not allow installing software on iPhone from outside the App
+Store without a paid developer account ($99/year), so there is no
+downloadable-link option here at $0 cost. The closest free equivalent —
+and still a real full-screen app icon with no browser chrome — is:
+1. Open the site in Safari (not Chrome; only Safari can do this on iOS).
 2. Tap the Share icon, then **Add to Home Screen**.
-3. Tap Add — the icon appears on your home screen and opens standalone.
+3. Tap Add.
 
-### macOS (Safari)
-1. Open the site in Safari.
-2. **File → Add to Dock** (on Safari versions that support it).
+Both of these are also built into the app itself (tap the download icon in
+the header).
 
-### Windows (Edge or Chrome)
-1. Open the site in Edge or Chrome.
-2. Click the install icon in the address bar, or **menu → Apps → Install
-   this site as an app**.
+AI in 5 is **not** listed in the Apple App Store or Microsoft Store.
 
-These same instructions are also built into the app (tap the download icon
-in the header).
-
-AI in 5 is distributed only as a web app — it is **not** listed in the Apple
-App Store or Microsoft Store.
+### Releasing a new desktop app version
+Bump `version` in `package.json`, commit, then:
+```bash
+git tag v<new-version>
+git push origin v<new-version>
+```
+This triggers `build-desktop-apps.yml`, which builds and publishes a new
+GitHub Release with fresh installers. The release is created as a **draft**
+by electron-builder — publish it from the repo's **Releases** page (or
+`gh release edit v<new-version> --draft=false`) to make it publicly visible.
 
 ## Troubleshooting
 
@@ -284,6 +308,9 @@ ai-in-5/
       archive-index.json, archive/*.json
   src/
     components/   pages/   hooks/   utils/   types/
+  electron/
+    main.cjs                                 # desktop app entry point
+    build/icon.png icon.icns icon.ico         # desktop app icons
   scripts/
     common.py fetch_news.py normalize_news.py
     rank_stories.py summarize_news.py generate_digest.py
@@ -295,19 +322,28 @@ ai-in-5/
 
 ## What's been tested, and what to verify yourself
 
-**Tested in this environment:**
-production build (`npm run build`), type-checking (zero errors), unit tests
-(18 passing: 7 TS + 11 Python), the live pipeline run against real RSS feeds,
-manifest/icon validity, and manual browser testing of the Today/Learn
-AI/Saved/Archive pages, Got it!/Review Again, bookmarking, light/dark mode,
-mobile (375px) and desktop layouts, and the install-instructions modal.
+**Tested end-to-end, including on real GitHub infrastructure:**
+- Production build, type-checking (zero errors), and unit tests (18
+  passing: 7 TS + 11 Python) — run both locally and in CI.
+- The live news pipeline against real RSS feeds, both locally and on a real
+  GitHub Actions run (`gh run watch`), which also committed a fresh digest
+  on its own.
+- The site is **actually deployed and live** at
+  [pmanasvi5.github.io/ai-in-5](https://pmanasvi5.github.io/ai-in-5/),
+  confirmed by curling it and its `data/latest.json`.
+- The macOS desktop app was built and launched locally in this environment
+  (process stayed up, embedded server verified to serve the real app and
+  data correctly). Both the macOS and Windows installers were then built
+  for real on GitHub's own `macos-latest`/`windows-latest` runners and
+  published to a [GitHub Release](https://github.com/pmanasvi5/ai-in-5/releases/latest)
+  — the download links were confirmed to work publicly, unauthenticated.
+- Manual browser testing of the Today/Learn AI/Saved/Archive pages, Got
+  it!/Review Again, bookmarking, light/dark mode, mobile (375px) and
+  desktop layouts, and the install modal.
 
-**Needs verification on your end** (this environment has no GitHub account
-or real device access):
-- Actually deploying to GitHub Pages and confirming the scheduled workflow
-  runs successfully with real repo secrets.
-- Installing on a real iPhone, Mac, and Windows machine — the PWA manifest
-  and service worker are valid and build correctly, but installability can
-  only be fully confirmed on real devices/browsers.
-- Gemini API behavior with a real key (the fallback path is what's been
-  exercised here, since no key was available in this environment).
+**Still worth verifying on your end:**
+- Actually running the installed desktop app on a real Mac and Windows
+  machine, including the Gatekeeper/SmartScreen unsigned-app warnings.
+- Installing the PWA on a real iPhone via Add to Home Screen.
+- Gemini API behavior with a real key (the extractive fallback is what's
+  been exercised, since no key was available in this environment).
