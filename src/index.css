@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-bg-light dark:bg-bg-dark text-ink-light dark:text-ink-dark antialiased;
+    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-accent;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-card shadow-soft dark:shadow-softDark;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-accent text-white font-semibold px-5 py-2.5
+      transition-transform duration-150 active:scale-95 hover:brightness-110 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-border-light dark:border-border-dark
+      text-ink-light dark:text-ink-dark font-medium px-5 py-2.5 transition-colors duration-150
+      hover:bg-accent-light/40 dark:hover:bg-white/5 active:scale-95;
+  }
+
+  .pill {
+    @apply inline-flex items-center rounded-full px-2.5 py-1 text-xs font-semibold uppercase tracking-wide;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Safe-area support for iPhone standalone PWA */
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.safe-top {
+  padding-top: env(safe-area-inset-top);
+}

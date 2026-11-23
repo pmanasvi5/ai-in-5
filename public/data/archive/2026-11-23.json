@@ -1,0 +1,109 @@
+{
+  "digestDate": "2026-11-23",
+  "editorialTimezone": "America/New_York",
+  "generatedAt": "2026-11-23T22:57:14.738986+00:00",
+  "lastSuccessfulUpdate": "2026-11-23T22:57:14.738989+00:00",
+  "status": "ok",
+  "stories": [
+    {
+      "id": "the-download-ai-s-judgment-problem-and-carbon-removal-s-crop",
+      "headline": "The Download: AI\u2019s judgment problem and carbon removal\u2019s crop threat",
+      "source": "MIT Technology Review",
+      "originalUrl": "https://www.technologyreview.com/2026/11/23/1149548/the-download-ai-judgment-problem-carbon-removal-crop-threat/",
+      "category": "Policy & Regulation",
+      "publishedAt": "2026-11-23T13:10:00+00:00",
+      "fetchedAt": "2026-11-23T22:57:13.793138+00:00",
+      "summary": [
+        "The most misunderstood graph in AI just got a major update A new report from the AI evaluation nonprofit METR finds that some capabilities are improving exponentially\u2014but models aren\u2019t as good at tasks that require judgment as they are at coding.",
+        "The report updates METR\u2019s widely shared time horizon plot , which tested models on a large suite of tasks.",
+        "The new version adds more open-ended tasks, such as designing AI evaluations and scoring philosophical arguments.",
+        "Models struggled with these tasks, which could prove crucial to automating research and development.",
+        "This was reported by MIT Technology Review; the original article has the full details and is linked below."
+      ],
+      "whyItMatters": "Rules like this shape what AI companies are allowed to do, and how much protection and transparency the public gets.",
+      "keyTerms": [],
+      "readingTimeMinutes": 3
+    },
+    {
+      "id": "nvidia-ceo-jensen-huang-is-back-what-happens-next",
+      "headline": "Nvidia CEO Jensen Huang is back. What happens next?",
+      "source": "The Verge",
+      "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
+      "category": "Company News",
+      "publishedAt": "2026-11-23T22:10:32+00:00",
+      "fetchedAt": "2026-11-23T22:57:12.207732+00:00",
+      "summary": [
+        "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an investigation.",
+        "However, after The New York Times reported there was evidence of another affair, this time with an Nvidia executive who reported directly to him, a board meeting that night ended with Huang\u2019s resignation , and Nvidia CFO Colette Kress was installed as the new interim CEO.",
+        "In recent years, Nvidia has become a key part of the Trump administration\u2019s AI push, a central figure in negotiations over potential Chinese access to cutting-edge AI hardware, and a company that has used its now $4 trillion-plus market cap to finance other AI companies.",
+        "Saying it received input \u201cfrom senior levels of the United States government,\u201d Nvidia\u2019s board announced his return as CEO on November 23rd, less than two weeks after his resignation.",
+        "This was reported by The Verge; the original article has the full details and is linked below."
+      ],
+      "whyItMatters": "Moves by major AI companies shape which tools get built, funded, and widely adopted next.",
+      "keyTerms": [],
+      "readingTimeMinutes": 4
+    },
+    {
+      "id": "a-legendary-philosopher-isn-t-buying-anthropic-s-consciousne",
+      "headline": "A legendary philosopher isn\u2019t buying Anthropic\u2019s consciousness argument",
+      "source": "MIT Technology Review",
+      "originalUrl": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
+      "category": "Safety & Security",
+      "publishedAt": "2026-11-23T17:36:08+00:00",
+      "fetchedAt": "2026-11-23T22:57:13.792738+00:00",
+      "summary": [
+        "Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing.",
+        "Given \u201cthe way we approach model sentience and moral status,\u201d Anthropic wrote\u2014which is to say it takes the possibility more seriously than any other AI company\u2014it might adopt more rules and restrictions than its competitors to make sure its AI models are treated well.",
+        "Anthropic counts a number of respected philosophers in its camp, and the company\u2019s rationale goes something like this: Today\u2019s AI might not be conscious, though we can\u2019t know for sure; the chances of sentience go up as AI gets more capable; and that means we should be preparing for a near future in which AI systems have \u201cmoral significance,\u201d meaning their consciousness makes it important they are protected from harm.",
+        "This thinking isn\u2019t all that fringe.",
+        "This was reported by MIT Technology Review; the original article has the full details and is linked below."
+      ],
+      "whyItMatters": "Safety issues like this affect how much people can trust AI systems with sensitive tasks and decisions.",
+      "keyTerms": [
+        "algorithm"
+      ],
+      "readingTimeMinutes": 4
+    },
+    {
+      "id": "claude-ai-can-review-pull-requests-and-ship-fixes-on-its-own",
+      "headline": "Claude AI can review pull requests and ship fixes on its own now",
+      "source": "The Verge",
+      "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
+      "category": "Tools & Apps",
+      "publishedAt": "2026-11-23T20:00:00+00:00",
+      "fetchedAt": "2026-11-23T22:57:12.207973+00:00",
+      "summary": [
+        "Anthropic is launching some new Claude AI features to help software engineers ship code.",
+        "As part of a new Claude Ship product being announced today, Claude now can review, fix, and approve pull requests.",
+        "Engineers have already been able to take advantage of Claude's code review capabilities thanks to the Code Review feature, which was announced in March and became generally available in October .",
+        "What's new alongside Claude Ship are the PR Steward and Claude Approvals agents, which are launching in beta today.",
+        "This was reported by The Verge; the original article has the full details and is linked below."
+      ],
+      "whyItMatters": "Tools like this change what ordinary people and workers can do with AI day to day, often without needing any technical skill.",
+      "keyTerms": [],
+      "readingTimeMinutes": 3
+    },
+    {
+      "id": "nothing-s-upcoming-ear-note-is-a-pair-of-earbuds-with-ai-tra",
+      "headline": "Nothing\u2019s upcoming Ear Note is a pair of earbuds with AI transcription",
+      "source": "The Verge",
+      "originalUrl": "https://www.theverge.com/gadgets/1040357/nothing-ear-note-earbuds-ai-recording",
+      "category": "New Models",
+      "publishedAt": "2026-11-23T19:04:52+00:00",
+      "fetchedAt": "2026-11-23T22:57:12.208113+00:00",
+      "summary": [
+        "Nothing\u2019s upcoming Ear Note is a pair of earbuds with AI transcription.",
+        "Nothing's new AI device is the Ear Note, a set of earbuds and their microphone-equipped charging case that can record and transcribe conversations, with a connected app to manage the recordings, transcriptions and AI-generated summaries, similar to Apple's new Watch feature and devices like Amazon's Bee wearable .",
+        "Nothing CEO Carl Pei demonstrated the new device to Bloomberg , but said the company hasn't yet settled on a price ahead of a planned launch on December 8th.",
+        "The report also says Nothing's rumored plans for an AI smartwatch and smart glasses are delayed, while it will be \"pursuing a more aggressive smartphone release schedule next y ...",
+        "This was reported by The Verge; the original article has the full details and is linked below."
+      ],
+      "whyItMatters": "New AI models often end up inside the everyday apps and tools people already use, so their abilities set what's possible next.",
+      "keyTerms": [],
+      "readingTimeMinutes": 4
+    }
+  ],
+  "termOfTheDayCandidateIds": [
+    "algorithm"
+  ]
+}

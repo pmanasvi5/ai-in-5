@@ -1,0 +1,106 @@
+name: Update digest and deploy
+
+on:
+  schedule:
+    # 11:00 UTC is 6:00/7:00 AM America/New_York depending on EST/EDT, which
+    # gives the pipeline a buffer to finish before the ~7:00 AM ET target.
+    # GitHub Actions cron does not know about DST, so this lands at 6-7am ET
+    # year round rather than exactly 7:00am; the app shows the real update
+    # time rather than promising an exact minute.
+    - cron: '0 11 * * *'
+  workflow_dispatch: {} # manual trigger for testing/troubleshooting
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-digest:
+    runs-on: ubuntu-latest
+    outputs:
+      digest_changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install pipeline dependencies
+        run: pip install -r requirements.txt
+
+      - name: Generate today's digest
+        working-directory: .
+        env:
+          # Optional: set this repo secret to enable Gemini-based summaries.
+          # The pipeline falls back to a non-generative, source-grounded
+          # summarizer automatically when it's unset or the API call fails.
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/generate_digest.py
+
+      - name: Commit updated digest data
+        id: commit
+        run: |
+          git config user.name "ai-in-5-bot"
+          git config user.email "actions@github.com"
+          git add public/data
+          if git diff --cached --quiet; then
+            echo "No digest changes to commit."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            git commit -m "Update daily AI digest"
+            git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  build-and-deploy:
+    needs: update-digest
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Type-check and unit test
+        run: |
+          npx tsc -b --noEmit
+          npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Set up GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload build artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
