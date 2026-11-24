@@ -1,8 +1,8 @@
 {
   "digestDate": "2026-11-24",
   "editorialTimezone": "America/New_York",
-  "generatedAt": "2026-11-24T23:08:19.990539+00:00",
-  "lastSuccessfulUpdate": "2026-11-24T23:08:19.990547+00:00",
+  "generatedAt": "2026-11-24T23:15:13.365150+00:00",
+  "lastSuccessfulUpdate": "2026-11-24T23:15:13.365158+00:00",
   "status": "ok",
   "stories": [
     {
@@ -12,7 +12,7 @@
       "originalUrl": "https://www.technologyreview.com/2026/11/24/1149669/the-download-data-centers-gas-ai-consciousness/",
       "category": "New Models",
       "publishedAt": "2026-11-24T13:10:00+00:00",
-      "fetchedAt": "2026-11-24T23:08:19.642981+00:00",
+      "fetchedAt": "2026-11-24T23:15:13.013706+00:00",
       "summary": [
         "Data centers are getting their own natural gas power plants One of the biggest obstacles to building a data center is getting approval to connect to the grid, a wait that could last as long as a decade.",
         "Some developers won\u2019t wait and are instead building their own off-grid gas power plants to fuel the AI boom.",
@@ -33,7 +33,7 @@
       "originalUrl": "https://www.technologyreview.com/2026/11/24/1149622/data-centers-natural-gas/",
       "category": "Policy & Regulation",
       "publishedAt": "2026-11-24T11:00:00+00:00",
-      "fetchedAt": "2026-11-24T23:08:19.643619+00:00",
+      "fetchedAt": "2026-11-24T23:15:13.014088+00:00",
       "summary": [
         "One of the biggest roadblocks to starting up a data center is getting approval to connect to the electric grid\u2014a wait that could last as long as a decade.",
         "Some developers aren\u2019t willing to wait and are instead opting to build their own off-grid, or behind-the-meter, gas power plants to fuel the AI boom. xAI\u2019s Memphis campus has famously used dozens of natural gas turbines, some of them without permits, as far back as 2024.",
@@ -52,7 +52,7 @@
       "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/1041227/the-new-york-times-warns-photographers-not-to-update-photoshop-over-ai-features",
       "category": "Tools & Apps",
       "publishedAt": "2026-11-24T16:09:23+00:00",
-      "fetchedAt": "2026-11-24T23:08:19.379087+00:00",
+      "fetchedAt": "2026-11-24T23:15:12.766210+00:00",
       "summary": [
         "The New York Times warns photographers not to update Photoshop over AI features.",
         "The New York Times is asking freelance photographers not to use the newest version of Adobe Photoshop because features in the 2027 update use AI \"in ways that may not be apparent to users.\" In an email seen by The Verge and posted on Threads , two of the Times ' photography leaders, Meaghan Looram and Josh Haner, write that the use of these features \"can result in metadata identifying photographs as AI-generated.\" Adobe has spent the past few years filling Photoshop and other apps in its creative suite with a trove of AI-powered tools.",
@@ -70,7 +70,7 @@
       "originalUrl": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
       "category": "Business & Work",
       "publishedAt": "2026-11-24T20:02:03+00:00",
-      "fetchedAt": "2026-11-24T23:08:19.378944+00:00",
+      "fetchedAt": "2026-11-24T23:15:12.766015+00:00",
       "summary": [
         "Jensen Huang reportedly tells Nvidia staff it\u2019s \u2018not true\u2019 Trump got him rehired.",
         "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports from Bloomberg , The New York Times , and The Handbasket's Marisa Kabas .",
@@ -89,7 +89,7 @@
       "originalUrl": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
       "category": "Company News",
       "publishedAt": "2026-11-24T16:30:00+00:00",
-      "fetchedAt": "2026-11-24T23:08:19.379053+00:00",
+      "fetchedAt": "2026-11-24T23:15:12.766162+00:00",
       "summary": [
         "Jensen Huang is partying it up in Ibiza.",
         "In a video with nearly 6 million views on Instagram, the former CEO of Nvidia is dancing in a crowded club, champagne glass in hand, still wearing his signature black leather jacket.",
