@@ -1,7 +1,7 @@
 {
   "name": "ai-in-5",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "main": "electron/main.cjs",
   "scripts": {
@@ -58,9 +58,11 @@
       "electron/main.cjs",
       "dist-electron-web/**/*"
     ],
+    "afterSign": "electron/afterSign.cjs",
     "mac": {
       "category": "public.app-category.news",
       "icon": "electron/build/icon.icns",
+      "identity": null,
       "target": [{ "target": "dmg", "arch": ["arm64", "x64"] }]
     },
     "win": {

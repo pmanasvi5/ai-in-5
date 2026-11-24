@@ -244,6 +244,14 @@ by electron-builder — publish it from the repo's **Releases** page (or
 
 ## Troubleshooting
 
+- **macOS says "The disk image is corrupted" when opening the .dmg.** This
+  is misleading — it's actually Gatekeeper rejecting a completely unsigned
+  app (common on Apple Silicon, which requires at least an ad-hoc signature
+  to run anything). Fixed from v0.1.1 onward by ad-hoc signing the app
+  during build (`electron/afterSign.cjs`, free — no paid certificate
+  needed). If you still hit this on an older download, redownload the
+  latest release, or run `xattr -cr ~/Downloads/AI-in-5-*.dmg` before
+  opening it.
 - **The digest looks stale / didn't update.** Check the **Actions** tab for
   the latest `Update digest and deploy` run. If the pipeline found too few
   qualifying stories, it intentionally keeps the previous digest rather than
