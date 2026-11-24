@@ -10,8 +10,10 @@ import { useGlossary } from './hooks/useGlossary'
 import { useLearningProgress } from './hooks/useLearningProgress'
 import { useBookmarks } from './hooks/useBookmarks'
 import { usePreferences } from './hooks/usePreferences'
+import { useMidnightReload } from './hooks/useMidnightReload'
 
 export default function App() {
+  useMidnightReload()
   const { isDark, setting, toggle } = useTheme()
   const { preferences, setFontSize } = usePreferences()
   const { digest, state: digestState, refresh } = useDigest()

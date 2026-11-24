@@ -2,12 +2,13 @@ name: Update digest and deploy
 
 on:
   schedule:
-    # 11:00 UTC is 6:00/7:00 AM America/New_York depending on EST/EDT, which
-    # gives the pipeline a buffer to finish before the ~7:00 AM ET target.
-    # GitHub Actions cron does not know about DST, so this lands at 6-7am ET
-    # year round rather than exactly 7:00am; the app shows the real update
-    # time rather than promising an exact minute.
-    - cron: '0 11 * * *'
+    # 05:05 UTC is 00:05 America/New_York during EST, or 01:05 during EDT.
+    # GitHub Actions cron does not know about DST, so this lands at
+    # 12:05-1:05 AM ET year round rather than exactly midnight; the app
+    # shows the real update time rather than promising an exact minute.
+    # Runs at :05 past rather than on the hour since GitHub recommends
+    # avoiding exact-hour schedules, which get delayed under load.
+    - cron: '5 5 * * *'
   workflow_dispatch: {} # manual trigger for testing/troubleshooting
   push:
     branches: [main]

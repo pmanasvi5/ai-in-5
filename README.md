@@ -182,10 +182,10 @@ For local testing, copy `.env.example` to `.env`, fill in the key, and
 ## Automatic daily updates
 
 `.github/workflows/update-and-deploy.yml` runs on a daily schedule
-(`cron: '0 11 * * *'`, targeting roughly 6–7am America/New_York — GitHub
-Actions cron doesn't account for daylight saving, so the exact minute drifts
-with EST/EDT; the app always shows the real last-updated time rather than
-promising an exact one). It:
+(`cron: '5 5 * * *'`, targeting roughly 12:05–1:05am America/New_York —
+GitHub Actions cron doesn't account for daylight saving, so the exact
+minute drifts with EST/EDT; the app always shows the real last-updated time
+rather than promising an exact one). It:
 
 1. Runs the full news pipeline and commits any resulting change to
    `public/data/`.
@@ -193,6 +193,15 @@ promising an exact one). It:
    workflow run, not a second workflow triggered by that commit (GitHub's
    default token doesn't trigger other workflows anyway, which avoids any
    loop).
+
+**The app also refreshes itself on the client side**, independent of this
+schedule: `useMidnightReload` (`src/hooks/useMidnightReload.ts`) reloads the
+page automatically the moment the *local* calendar day changes for whoever
+has it open — a timer for tabs left open and active, plus a visibility/focus
+check that catches a tab that was backgrounded or a laptop that was asleep
+through midnight. This means anyone with the app open overnight sees the
+next day's digest without doing anything, once the backend above has
+actually published it.
 
 You can also trigger it manually any time from the **Actions** tab
 (**workflow_dispatch**) for testing or troubleshooting.
