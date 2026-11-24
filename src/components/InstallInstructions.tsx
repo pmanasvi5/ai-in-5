@@ -67,10 +67,13 @@ export function InstallInstructions({ onClose }: InstallInstructionsProps) {
             <div className="flex items-start gap-2 text-xs text-muted-light dark:text-muted-dark">
               <ShieldAlert size={14} className="shrink-0 mt-0.5" />
               <span>
-                This app isn't code-signed (that requires a paid developer certificate), so your OS will warn
-                about an unidentified/unknown publisher the first time. On Mac: right-click the app → Open. On
-                Windows: click "More info" → "Run anyway" on the SmartScreen prompt. This is expected for a
-                free, independently-distributed app — not a sign anything is wrong.
+                This app isn't notarized (that requires a paid Apple developer account), so macOS will say
+                "Apple could not verify this app is free of malware." Open{' '}
+                <strong className="text-ink-light dark:text-ink-dark">System Settings → Privacy &amp; Security</strong>,
+                scroll down, and click <strong className="text-ink-light dark:text-ink-dark">Open Anyway</strong> next
+                to AI in 5 — or run <code className="px-1 rounded bg-black/5 dark:bg-white/10">xattr -cr "/Applications/AI in 5.app"</code>{' '}
+                in Terminal. On Windows: click "More info" → "Run anyway" on the SmartScreen prompt. This is expected
+                for a free, independently-distributed app — not a sign anything is wrong.
               </span>
             </div>
           </section>

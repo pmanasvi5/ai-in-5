@@ -245,13 +245,20 @@ by electron-builder — publish it from the repo's **Releases** page (or
 ## Troubleshooting
 
 - **macOS says "The disk image is corrupted" when opening the .dmg.** This
-  is misleading — it's actually Gatekeeper rejecting a completely unsigned
-  app (common on Apple Silicon, which requires at least an ad-hoc signature
-  to run anything). Fixed from v0.1.1 onward by ad-hoc signing the app
-  during build (`electron/afterSign.cjs`, free — no paid certificate
-  needed). If you still hit this on an older download, redownload the
-  latest release, or run `xattr -cr ~/Downloads/AI-in-5-*.dmg` before
-  opening it.
+  was misleading — it was actually Gatekeeper rejecting a completely
+  unsigned app (common on Apple Silicon, which requires at least an ad-hoc
+  signature to run anything). Fixed from v0.1.1 onward by ad-hoc signing
+  the app during build (`electron/afterSign.cjs`, free — no paid
+  certificate needed). If you still hit this on an older download,
+  redownload the latest release.
+- **macOS says "Apple could not verify \[app\] is free of malware."** This
+  is expected — the app is ad-hoc signed but not *notarized*, which
+  requires a paid Apple Developer account. Open **System Settings →
+  Privacy & Security**, scroll down, and click **Open Anyway** next to AI
+  in 5, then try opening it again. Or, faster: run
+  `xattr -cr "/Applications/AI in 5.app"` in Terminal once, after which it
+  opens normally. (On current macOS, right-click → Open no longer bypasses
+  this specific dialog the way it used to on older versions.)
 - **The digest looks stale / didn't update.** Check the **Actions** tab for
   the latest `Update digest and deploy` run. If the pipeline found too few
   qualifying stories, it intentionally keeps the previous digest rather than
