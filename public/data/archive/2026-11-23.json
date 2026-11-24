@@ -1,8 +1,8 @@
 {
   "digestDate": "2026-11-23",
   "editorialTimezone": "America/New_York",
-  "generatedAt": "2026-11-23T23:57:27.157147+00:00",
-  "lastSuccessfulUpdate": "2026-11-23T23:57:27.157156+00:00",
+  "generatedAt": "2026-11-24T00:07:58.436305+00:00",
+  "lastSuccessfulUpdate": "2026-11-24T00:07:58.436315+00:00",
   "status": "ok",
   "stories": [
     {
@@ -12,7 +12,7 @@
       "originalUrl": "https://www.technologyreview.com/2026/11/23/1149548/the-download-ai-judgment-problem-carbon-removal-crop-threat/",
       "category": "Policy & Regulation",
       "publishedAt": "2026-11-23T13:10:00+00:00",
-      "fetchedAt": "2026-11-23T23:57:26.878397+00:00",
+      "fetchedAt": "2026-11-24T00:07:58.168672+00:00",
       "summary": [
         "The most misunderstood graph in AI just got a major update A new report from the AI evaluation nonprofit METR finds that some capabilities are improving exponentially\u2014but models aren\u2019t as good at tasks that require judgment as they are at coding.",
         "The report updates METR\u2019s widely shared time horizon plot , which tested models on a large suite of tasks.",
@@ -31,7 +31,7 @@
       "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
       "category": "Company News",
       "publishedAt": "2026-11-23T22:10:32+00:00",
-      "fetchedAt": "2026-11-23T23:57:26.675692+00:00",
+      "fetchedAt": "2026-11-24T00:07:57.969907+00:00",
       "summary": [
         "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an investigation.",
         "However, after The New York Times reported there was evidence of another affair, this time with an Nvidia executive who reported directly to him, a board meeting that night ended with Huang\u2019s resignation , and Nvidia CFO Colette Kress was installed as the new interim CEO.",
@@ -50,7 +50,7 @@
       "originalUrl": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
       "category": "Safety & Security",
       "publishedAt": "2026-11-23T17:36:08+00:00",
-      "fetchedAt": "2026-11-23T23:57:26.878053+00:00",
+      "fetchedAt": "2026-11-24T00:07:58.168216+00:00",
       "summary": [
         "Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing.",
         "Given \u201cthe way we approach model sentience and moral status,\u201d Anthropic wrote\u2014which is to say it takes the possibility more seriously than any other AI company\u2014it might adopt more rules and restrictions than its competitors to make sure its AI models are treated well.",
@@ -71,7 +71,7 @@
       "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/1040134/anthropic-claude-ship-ai-pull-requests",
       "category": "Tools & Apps",
       "publishedAt": "2026-11-23T20:00:00+00:00",
-      "fetchedAt": "2026-11-23T23:57:26.675839+00:00",
+      "fetchedAt": "2026-11-24T00:07:57.970136+00:00",
       "summary": [
         "Anthropic is launching some new Claude AI features to help software engineers ship code.",
         "As part of a new Claude Ship product being announced today, Claude now can review, fix, and approve pull requests.",
@@ -90,7 +90,7 @@
       "originalUrl": "https://www.theverge.com/gadgets/1040357/nothing-ear-note-earbuds-ai-recording",
       "category": "New Models",
       "publishedAt": "2026-11-23T19:04:52+00:00",
-      "fetchedAt": "2026-11-23T23:57:26.675925+00:00",
+      "fetchedAt": "2026-11-24T00:07:57.970248+00:00",
       "summary": [
         "Nothing\u2019s upcoming Ear Note is a pair of earbuds with AI transcription.",
         "Nothing's new AI device is the Ear Note, a set of earbuds and their microphone-equipped charging case that can record and transcribe conversations, with a connected app to manage the recordings, transcriptions and AI-generated summaries, similar to Apple's new Watch feature and devices like Amazon's Bee wearable .",
