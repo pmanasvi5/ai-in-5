@@ -1,6 +1,8 @@
 import { useState, type ReactNode } from 'react'
 import { TopNav, BottomNav } from './Navigation'
 import { InstallInstructions } from './InstallInstructions'
+import { IosInstallBanner } from './IosInstallBanner'
+import { useIosInstallPrompt } from '../hooks/useIosInstallPrompt'
 import type { ThemeSetting } from '../hooks/useTheme'
 import type { UserPreferences } from '../types'
 
@@ -15,6 +17,7 @@ interface LayoutProps {
 
 export function Layout({ children, isDark, themeSetting, onToggleTheme, fontSize, onSetFontSize }: LayoutProps) {
   const [showInstall, setShowInstall] = useState(false)
+  const iosPrompt = useIosInstallPrompt()
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -29,6 +32,7 @@ export function Layout({ children, isDark, themeSetting, onToggleTheme, fontSize
       <main className="flex-1 w-full max-w-3xl mx-auto px-4 pt-6 pb-24 md:pb-12">{children}</main>
       <BottomNav />
       {showInstall && <InstallInstructions onClose={() => setShowInstall(false)} />}
+      {iosPrompt.visible && !showInstall && <IosInstallBanner onDismiss={iosPrompt.dismiss} />}
     </div>
   )
 }
