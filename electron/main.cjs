@@ -8,6 +8,7 @@ const { app, BrowserWindow, shell } = require('electron')
 const http = require('node:http')
 const fs = require('node:fs')
 const path = require('node:path')
+const { checkForUpdates } = require('./updates.cjs')
 
 const WEB_ROOT = path.join(__dirname, '..', 'dist-electron-web')
 
@@ -90,6 +91,10 @@ app.whenReady().then(async () => {
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) createWindow(port)
   })
+
+  // Give the window a moment to appear before possibly popping an update
+  // dialog on top of it (or, on Windows, starting a background download).
+  setTimeout(checkForUpdates, 3000)
 })
 
 app.on('window-all-closed', () => {

@@ -73,6 +73,23 @@ term at a time, with no repeats once you've learned something.
 All three also pick up new digests automatically without anyone manually
 refreshing, via `useMidnightReload` — see **Automatic daily updates** below.
 
+### What happens when the *app itself* gets a new version
+
+That's a separate question from daily content — this is about shipping a
+code change (a bug fix, a new feature) in a new tagged release.
+
+- **Web** updates itself automatically — it's just a page load, and
+  `vite-plugin-pwa` keeps the service worker current in the background.
+- **Windows** auto-updates silently via `electron-updater`
+  (`electron/updates.cjs`), checking GitHub Releases on launch and
+  installing on next quit — no paid certificate needed for this to work.
+- **macOS** *can't* auto-update silently for free: Apple's update mechanism
+  (Squirrel.Mac) refuses to apply an update unless the app is signed with a
+  paid Developer ID certificate, the same restriction behind the Gatekeeper
+  warnings covered above. Instead, the app checks GitHub Releases on launch
+  and — if a newer version exists — shows a dialog with a one-click link to
+  download it. Not silent, but no one has to go looking for it either.
+
 ## Local setup
 
 Requirements: Node.js 18+ and Python 3.10+.
