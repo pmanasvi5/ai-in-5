@@ -1,12 +1,13 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { ArchiveIndexEntry, DailyDigest } from '../types'
+import { DATA_BASE_URL } from '../utils/dataBaseUrl'
 
 export function useArchiveIndex() {
   const [entries, setEntries] = useState<ArchiveIndexEntry[]>([])
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    fetch('data/archive-index.json')
+    fetch(`${DATA_BASE_URL}data/archive-index.json`)
       .then((res) => (res.ok ? res.json() : []))
       .then((data: ArchiveIndexEntry[]) => setEntries(data))
       .catch(() => setEntries([]))
@@ -22,7 +23,7 @@ export function useArchivedDigest(date: string | null) {
 
   const load = useCallback((d: string) => {
     setLoading(true)
-    fetch(`data/archive/${d}.json`)
+    fetch(`${DATA_BASE_URL}data/archive/${d}.json`)
       .then((res) => {
         if (!res.ok) throw new Error('not found')
         return res.json()

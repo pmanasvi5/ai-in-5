@@ -1,13 +1,13 @@
 {
   "name": "ai-in-5",
   "private": true,
-  "version": "0.1.1",
+  "version": "0.1.2",
   "type": "module",
   "main": "electron/main.cjs",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "build:electron-web": "tsc -b && cross-env VITE_BASE=/ vite build --outDir dist-electron-web",
+    "build:electron-web": "tsc -b && cross-env VITE_BASE=/ VITE_DATA_BASE_URL=https://pmanasvi5.github.io/ai-in-5/ vite build --outDir dist-electron-web",
     "electron:dev": "npm run build:electron-web && electron .",
     "electron:build:mac": "npm run build:electron-web && electron-builder --mac --publish never",
     "electron:build:win": "npm run build:electron-web && electron-builder --win --publish never",

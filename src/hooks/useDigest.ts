@@ -1,9 +1,10 @@
 import { useCallback, useEffect, useState } from 'react'
 import type { DailyDigest } from '../types'
+import { DATA_BASE_URL } from '../utils/dataBaseUrl'
 
 type FetchState = 'loading' | 'ready' | 'error'
 
-export function useDigest(url = 'data/latest.json') {
+export function useDigest(url = `${DATA_BASE_URL}data/latest.json`) {
   const [digest, setDigest] = useState<DailyDigest | null>(null)
   const [state, setState] = useState<FetchState>('loading')
   const [refreshKey, setRefreshKey] = useState(0)

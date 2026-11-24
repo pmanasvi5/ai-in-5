@@ -56,6 +56,23 @@ term at a time, with no repeats once you've learned something.
 | Automation | GitHub Actions (scheduled + manual) | Free compute minutes for public repos; runs the pipeline and deploys daily. |
 | User data | `localStorage` | No backend, no database, no accounts needed. |
 
+### How every platform stays up to date
+
+- **Web (GitHub Pages)** fetches `data/*.json` same-origin — it's whatever
+  the latest deploy published, and the service worker caches it for
+  offline use.
+- **Desktop (Mac/Windows installers)** bundles the UI locally, but fetches
+  `data/*.json` **live from the GitHub Pages site**
+  (`VITE_DATA_BASE_URL`, set in `build:electron-web` in `package.json`) —
+  not from a snapshot baked in at install time. That means a desktop
+  install from months ago still shows today's digest; it does need
+  internet access to do so, same as the web version.
+- **iPhone (Add to Home Screen)** is just the web app, so it's always
+  current the moment it's reloaded.
+
+All three also pick up new digests automatically without anyone manually
+refreshing, via `useMidnightReload` — see **Automatic daily updates** below.
+
 ## Local setup
 
 Requirements: Node.js 18+ and Python 3.10+.
