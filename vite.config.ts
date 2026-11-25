@@ -23,8 +23,8 @@ export default defineConfig(({ command }) => {
         start_url: '/ai-in-5/',
         scope: '/ai-in-5/',
         display: 'standalone',
-        background_color: '#FAF9F6',
-        theme_color: '#8B7CE8',
+        background_color: '#FBF7F0',
+        theme_color: '#1E46E6',
         icons: [
           { src: 'icons/icon-192.png', sizes: '192x192', type: 'image/png' },
           { src: 'icons/icon-512.png', sizes: '512x512', type: 'image/png' },

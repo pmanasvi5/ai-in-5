@@ -5,7 +5,11 @@
     "definition": "Technology that lets computers do things that normally need human thinking, like understanding language, recognizing images, or making decisions.",
     "everydayExample": "The autocorrect on your phone and the recommendations on a streaming app are both small, everyday examples of AI.",
     "whyItMatters": "AI is showing up in more products every year, from search engines to customer service, so understanding the basic idea helps you make sense of the news.",
-    "relatedTerms": ["machine-learning", "generative-ai", "ai-agent"]
+    "relatedTerms": [
+      "machine-learning",
+      "generative-ai",
+      "ai-agent"
+    ]
   },
   {
     "id": "machine-learning",
@@ -13,7 +17,11 @@
     "definition": "A way of building AI where a computer learns patterns from examples instead of being given step-by-step instructions by a programmer.",
     "everydayExample": "An email app that learns to flag spam by studying thousands of past emails, rather than following a fixed list of rules.",
     "whyItMatters": "Most modern AI, including chatbots and image generators, is built using machine learning, so it's the foundation for almost everything else in this glossary.",
-    "relatedTerms": ["artificial-intelligence", "deep-learning", "model-training"]
+    "relatedTerms": [
+      "artificial-intelligence",
+      "deep-learning",
+      "model-training"
+    ]
   },
   {
     "id": "deep-learning",
@@ -21,7 +29,11 @@
     "definition": "A type of machine learning that uses many layers of connected calculations, loosely inspired by how neurons in the brain pass signals, to find patterns in large amounts of data.",
     "everydayExample": "The technology behind a phone camera automatically recognizing faces in a photo.",
     "whyItMatters": "Deep learning is what made today's most capable AI, including chatbots and image generators, possible.",
-    "relatedTerms": ["machine-learning", "neural-network", "transformer"]
+    "relatedTerms": [
+      "machine-learning",
+      "neural-network",
+      "transformer"
+    ]
   },
   {
     "id": "neural-network",
@@ -29,7 +41,11 @@
     "definition": "A computer system made of many simple, connected parts that work together to recognize patterns, loosely modeled on how brain cells connect to each other.",
     "everydayExample": "A neural network can learn to tell cats apart from dogs in photos after seeing thousands of labeled examples.",
     "whyItMatters": "Neural networks are the basic building block underneath nearly all modern AI systems.",
-    "relatedTerms": ["deep-learning", "transformer", "parameters"]
+    "relatedTerms": [
+      "deep-learning",
+      "transformer",
+      "parameters"
+    ]
   },
   {
     "id": "generative-ai",
@@ -37,7 +53,11 @@
     "definition": "AI that creates new content, like text, images, audio, or video, instead of just analyzing or sorting existing content.",
     "everydayExample": "Typing a description and getting back an original image, or asking a chatbot to draft an email for you.",
     "whyItMatters": "Generative AI is behind most of the AI tools people use today, including chatbots, image generators, and writing assistants.",
-    "relatedTerms": ["large-language-model", "diffusion-model", "prompt"]
+    "relatedTerms": [
+      "large-language-model",
+      "diffusion-model",
+      "prompt"
+    ]
   },
   {
     "id": "large-language-model",
@@ -45,7 +65,12 @@
     "definition": "A type of AI trained on huge amounts of text so it can understand and generate human-like language.",
     "everydayExample": "The AI behind chatbots like ChatGPT, Claude, and Gemini are all large language models.",
     "whyItMatters": "Large language models power most of today's AI writing tools, chatbots, and search assistants.",
-    "relatedTerms": ["generative-ai", "tokens", "transformer", "context-window"]
+    "relatedTerms": [
+      "generative-ai",
+      "tokens",
+      "transformer",
+      "context-window"
+    ]
   },
   {
     "id": "ai-agent",
@@ -53,7 +78,11 @@
     "definition": "An AI system that can work toward a goal and use tools to complete tasks, sometimes without needing step-by-step instructions.",
     "everydayExample": "An AI assistant that checks your calendar, finds available meeting times, and drafts an invitation on its own.",
     "whyItMatters": "AI agents can help people automate tasks that would otherwise require several manual steps.",
-    "relatedTerms": ["large-language-model", "tool-use", "autonomous-ai"]
+    "relatedTerms": [
+      "large-language-model",
+      "tool-use",
+      "autonomous-ai"
+    ]
   },
   {
     "id": "prompt",
@@ -61,7 +90,10 @@
     "definition": "The text, question, or instruction you give an AI system to tell it what you want it to do.",
     "everydayExample": "Typing \"Summarize this email in two sentences\" into a chatbot is a prompt.",
     "whyItMatters": "How you phrase a prompt can change the quality of an AI's response, which is why prompt writing has become its own skill.",
-    "relatedTerms": ["prompt-engineering", "large-language-model"]
+    "relatedTerms": [
+      "prompt-engineering",
+      "large-language-model"
+    ]
   },
   {
     "id": "prompt-engineering",
@@ -69,7 +101,10 @@
     "definition": "The practice of carefully wording instructions to an AI system to get better, more accurate, or more useful results.",
     "everydayExample": "Adding \"explain this as if I'm a beginner\" to a question often gets a clearer answer from a chatbot.",
     "whyItMatters": "Good prompt engineering can make the same AI tool noticeably more useful without any technical changes.",
-    "relatedTerms": ["prompt", "large-language-model"]
+    "relatedTerms": [
+      "prompt",
+      "large-language-model"
+    ]
   },
   {
     "id": "tokens",
@@ -77,7 +112,10 @@
     "definition": "Small pieces of text, often parts of words, that an AI language model reads and generates one at a time.",
     "everydayExample": "The word \"unbelievable\" might be broken into three tokens: \"un\", \"believ\", and \"able\".",
     "whyItMatters": "AI tools often charge by the token and have limits on how many tokens they can handle at once, which affects cost and performance.",
-    "relatedTerms": ["large-language-model", "context-window"]
+    "relatedTerms": [
+      "large-language-model",
+      "context-window"
+    ]
   },
   {
     "id": "fine-tuning",
@@ -85,7 +123,10 @@
     "definition": "Taking an already-trained AI model and training it further on a smaller, specific set of data so it gets better at a particular task.",
     "everydayExample": "Fine-tuning a general chatbot on a company's support documents so it can answer customer questions more accurately.",
     "whyItMatters": "Fine-tuning lets companies customize powerful AI models for their own needs without building one from scratch.",
-    "relatedTerms": ["model-training", "large-language-model"]
+    "relatedTerms": [
+      "model-training",
+      "large-language-model"
+    ]
   },
   {
     "id": "inference",
@@ -93,7 +134,10 @@
     "definition": "The process of an already-trained AI model actually being used to produce an answer, as opposed to the earlier process of training it.",
     "everydayExample": "Every time you send a message to a chatbot and get a reply, that reply was produced through inference.",
     "whyItMatters": "Inference is what happens every time you use an AI tool, and its speed and cost affect how AI products feel to use.",
-    "relatedTerms": ["model-training", "large-language-model"]
+    "relatedTerms": [
+      "model-training",
+      "large-language-model"
+    ]
   },
   {
     "id": "multimodal-ai",
@@ -101,7 +145,11 @@
     "definition": "AI that can understand or create more than one type of content at once, such as text, images, audio, or video together.",
     "everydayExample": "An AI app that can look at a photo of a receipt and answer written questions about it.",
     "whyItMatters": "Multimodal AI lets tools understand the world more like people do, by combining different kinds of information.",
-    "relatedTerms": ["generative-ai", "computer-vision", "large-language-model"]
+    "relatedTerms": [
+      "generative-ai",
+      "computer-vision",
+      "large-language-model"
+    ]
   },
   {
     "id": "retrieval-augmented-generation",
@@ -109,7 +157,10 @@
     "definition": "A technique where an AI model looks up relevant information from an outside source before answering, instead of relying only on what it memorized during training.",
     "everydayExample": "A chatbot that searches a company's internal documents before answering a question about company policy.",
     "whyItMatters": "This technique helps AI give more accurate, up-to-date answers and reduces made-up information.",
-    "relatedTerms": ["ai-hallucination", "large-language-model"]
+    "relatedTerms": [
+      "ai-hallucination",
+      "large-language-model"
+    ]
   },
   {
     "id": "ai-hallucination",
@@ -117,7 +168,10 @@
     "definition": "When an AI system confidently states information that is false, made up, or not actually supported by its sources.",
     "everydayExample": "A chatbot inventing a book title and author that don't actually exist, while sounding completely certain.",
     "whyItMatters": "Hallucinations are a key reason experts recommend double-checking important facts an AI gives you.",
-    "relatedTerms": ["retrieval-augmented-generation", "large-language-model"]
+    "relatedTerms": [
+      "retrieval-augmented-generation",
+      "large-language-model"
+    ]
   },
   {
     "id": "natural-language-processing",
@@ -125,7 +179,10 @@
     "definition": "The branch of AI focused on helping computers understand, interpret, and generate human language.",
     "everydayExample": "Voice assistants understanding spoken questions, or email apps detecting the tone of a message.",
     "whyItMatters": "Natural language processing is the foundation that makes chatbots, translation tools, and voice assistants possible.",
-    "relatedTerms": ["large-language-model", "sentiment-analysis"]
+    "relatedTerms": [
+      "large-language-model",
+      "sentiment-analysis"
+    ]
   },
   {
     "id": "computer-vision",
@@ -133,7 +190,10 @@
     "definition": "The branch of AI focused on helping computers understand and interpret images and video.",
     "everydayExample": "A phone unlocking itself after recognizing your face, or a self-checkout kiosk identifying produce by sight.",
     "whyItMatters": "Computer vision powers everything from medical scan analysis to self-driving car safety systems.",
-    "relatedTerms": ["multimodal-ai", "deep-learning"]
+    "relatedTerms": [
+      "multimodal-ai",
+      "deep-learning"
+    ]
   },
   {
     "id": "model-training",
@@ -141,7 +201,11 @@
     "definition": "The process of feeding an AI system large amounts of data so it can learn patterns and improve at a task.",
     "everydayExample": "Showing an AI millions of labeled photos of animals so it learns to identify a cat versus a dog.",
     "whyItMatters": "Training determines how capable, accurate, and safe an AI model ultimately is.",
-    "relatedTerms": ["machine-learning", "fine-tuning", "dataset"]
+    "relatedTerms": [
+      "machine-learning",
+      "fine-tuning",
+      "dataset"
+    ]
   },
   {
     "id": "open-source-ai",
@@ -149,7 +213,10 @@
     "definition": "AI models or tools whose underlying code or weights are shared publicly, so anyone can inspect, use, or build on them.",
     "everydayExample": "A developer downloading a freely published AI model to run on their own computer instead of paying for access to a closed one.",
     "whyItMatters": "Open-source AI can make powerful tools more accessible, but it also raises new questions about safety and misuse.",
-    "relatedTerms": ["model-weights", "foundation-model"]
+    "relatedTerms": [
+      "model-weights",
+      "foundation-model"
+    ]
   },
   {
     "id": "transformer",
@@ -157,7 +224,11 @@
     "definition": "A type of neural network design, introduced in 2017, that is especially good at understanding relationships between words in a sentence, no matter how far apart they are.",
     "everydayExample": "Transformers are the underlying architecture used in nearly every major chatbot today.",
     "whyItMatters": "The transformer design is the technical breakthrough behind the rapid progress in AI language tools since the late 2010s.",
-    "relatedTerms": ["neural-network", "large-language-model", "attention-mechanism"]
+    "relatedTerms": [
+      "neural-network",
+      "large-language-model",
+      "attention-mechanism"
+    ]
   },
   {
     "id": "embeddings",
@@ -165,7 +236,10 @@
     "definition": "A way of turning words, sentences, or images into lists of numbers that capture their meaning, so a computer can compare how similar two things are.",
     "everydayExample": "A search tool that finds \"laptop bag\" results when you search \"computer sleeve\", because their embeddings are close in meaning.",
     "whyItMatters": "Embeddings are what let AI search and recommendation tools understand meaning instead of just matching exact words.",
-    "relatedTerms": ["retrieval-augmented-generation", "vector-database"]
+    "relatedTerms": [
+      "retrieval-augmented-generation",
+      "vector-database"
+    ]
   },
   {
     "id": "foundation-model",
@@ -173,7 +247,11 @@
     "definition": "A large, general-purpose AI model trained on broad data, which can then be adapted or fine-tuned for many different specific tasks.",
     "everydayExample": "A single large model that can be adapted to write emails, summarize documents, or answer customer questions.",
     "whyItMatters": "Foundation models let companies build many different AI products from one underlying system instead of starting from scratch each time.",
-    "relatedTerms": ["large-language-model", "fine-tuning", "open-source-ai"]
+    "relatedTerms": [
+      "large-language-model",
+      "fine-tuning",
+      "open-source-ai"
+    ]
   },
   {
     "id": "context-window",
@@ -181,7 +259,10 @@
     "definition": "The amount of text an AI model can consider at one time when generating a response, measured in tokens.",
     "everydayExample": "If you paste a very long document into a chatbot and it forgets the beginning, you've likely gone past its context window.",
     "whyItMatters": "A larger context window lets an AI handle longer documents and conversations without losing track of earlier details.",
-    "relatedTerms": ["tokens", "large-language-model"]
+    "relatedTerms": [
+      "tokens",
+      "large-language-model"
+    ]
   },
   {
     "id": "parameters",
@@ -189,7 +270,10 @@
     "definition": "The internal numerical settings a neural network adjusts during training; roughly, the \"knowledge dials\" that get tuned as the model learns.",
     "everydayExample": "A model described as having \"70 billion parameters\" has that many internal values shaping how it responds.",
     "whyItMatters": "Parameter count is one rough indicator of a model's scale and potential capability, though not the only one.",
-    "relatedTerms": ["neural-network", "model-training"]
+    "relatedTerms": [
+      "neural-network",
+      "model-training"
+    ]
   },
   {
     "id": "diffusion-model",
@@ -197,7 +281,10 @@
     "definition": "A type of generative AI that creates images by starting with random noise and gradually refining it into a clear picture, step by step.",
     "everydayExample": "AI image generators that turn a text description into a picture typically use diffusion models.",
     "whyItMatters": "Diffusion models are the main technology behind today's most popular AI image and video generators.",
-    "relatedTerms": ["generative-ai", "multimodal-ai"]
+    "relatedTerms": [
+      "generative-ai",
+      "multimodal-ai"
+    ]
   },
   {
     "id": "tool-use",
@@ -205,7 +292,10 @@
     "definition": "An AI model's ability to call external programs, like a calculator, search engine, or calendar app, to complete a task more reliably.",
     "everydayExample": "A chatbot that uses a live web search tool to answer a question about today's weather instead of guessing.",
     "whyItMatters": "Tool use lets AI models go beyond their training data and interact with real, current information and systems.",
-    "relatedTerms": ["ai-agent", "large-language-model"]
+    "relatedTerms": [
+      "ai-agent",
+      "large-language-model"
+    ]
   },
   {
     "id": "autonomous-ai",
@@ -213,7 +303,10 @@
     "definition": "AI systems designed to take actions and make decisions on their own, with little or no step-by-step human guidance.",
     "everydayExample": "A self-driving car making moment-to-moment steering and braking decisions without a person directing each one.",
     "whyItMatters": "The more autonomy an AI system has, the more important it becomes to test its safety and reliability carefully.",
-    "relatedTerms": ["ai-agent", "ai-safety"]
+    "relatedTerms": [
+      "ai-agent",
+      "ai-safety"
+    ]
   },
   {
     "id": "ai-safety",
@@ -221,7 +314,10 @@
     "definition": "The field focused on making sure AI systems behave reliably, avoid causing harm, and stay aligned with what people actually want.",
     "everydayExample": "Testing a chatbot extensively before release to make sure it won't give dangerous instructions if asked.",
     "whyItMatters": "As AI systems become more capable and widely used, AI safety research helps reduce real-world risks.",
-    "relatedTerms": ["ai-alignment", "autonomous-ai"]
+    "relatedTerms": [
+      "ai-alignment",
+      "autonomous-ai"
+    ]
   },
   {
     "id": "ai-alignment",
@@ -229,7 +325,10 @@
     "definition": "The effort to make sure an AI system's goals and behavior actually match what its human users and developers intend.",
     "everydayExample": "Training a chatbot to refuse harmful requests even if a user tries to trick it into ignoring its guidelines.",
     "whyItMatters": "Poor alignment can cause AI to behave in unexpected or unwanted ways, even if it's technically working as designed.",
-    "relatedTerms": ["ai-safety", "reinforcement-learning-from-human-feedback"]
+    "relatedTerms": [
+      "ai-safety",
+      "reinforcement-learning-from-human-feedback"
+    ]
   },
   {
     "id": "reinforcement-learning-from-human-feedback",
@@ -237,7 +336,10 @@
     "definition": "A training method where human reviewers rate an AI's responses, and the model is adjusted to produce more of the highly-rated answers.",
     "everydayExample": "People ranking which of two chatbot replies is more helpful, and the model learning from those rankings.",
     "whyItMatters": "This technique is a major reason modern chatbots feel more helpful and conversational than earlier AI systems.",
-    "relatedTerms": ["ai-alignment", "model-training"]
+    "relatedTerms": [
+      "ai-alignment",
+      "model-training"
+    ]
   },
   {
     "id": "bias-in-ai",
@@ -245,7 +347,10 @@
     "definition": "When an AI system produces unfair or skewed results because of patterns, gaps, or imbalances in the data it was trained on.",
     "everydayExample": "A hiring tool that unfairly favors certain resumes because its training data reflected past, biased hiring decisions.",
     "whyItMatters": "Bias can cause real harm when AI is used in sensitive areas like hiring, lending, or healthcare.",
-    "relatedTerms": ["dataset", "ai-safety"]
+    "relatedTerms": [
+      "dataset",
+      "ai-safety"
+    ]
   },
   {
     "id": "dataset",
@@ -253,7 +358,10 @@
     "definition": "A large collection of information, like text, images, or numbers, that is used to train or test an AI model.",
     "everydayExample": "A collection of millions of labeled photos used to train an AI to recognize street signs.",
     "whyItMatters": "The quality and diversity of a dataset strongly shapes how accurate and fair an AI system turns out to be.",
-    "relatedTerms": ["model-training", "bias-in-ai"]
+    "relatedTerms": [
+      "model-training",
+      "bias-in-ai"
+    ]
   },
   {
     "id": "algorithm",
@@ -261,7 +369,9 @@
     "definition": "A set of step-by-step instructions a computer follows to solve a problem or complete a task.",
     "everydayExample": "The ranking system a social media app uses to decide which posts to show you first.",
     "whyItMatters": "Nearly all software, including AI, is built from algorithms, so the word comes up constantly in tech news.",
-    "relatedTerms": ["machine-learning"]
+    "relatedTerms": [
+      "machine-learning"
+    ]
   },
   {
     "id": "api",
@@ -269,7 +379,9 @@
     "definition": "A defined way for one piece of software to request information or services from another, like a menu of actions one program offers to others.",
     "everydayExample": "A weather app pulling live forecast data from a weather service through an API, instead of collecting the data itself.",
     "whyItMatters": "Most AI tools are accessed by developers through an API, which is how AI features end up inside other apps.",
-    "relatedTerms": ["inference"]
+    "relatedTerms": [
+      "inference"
+    ]
   },
   {
     "id": "chatbot",
@@ -277,7 +389,10 @@
     "definition": "A software program designed to hold a conversation with a person, often using text or voice.",
     "everydayExample": "Customer service widgets on websites that answer basic questions before connecting you to a human.",
     "whyItMatters": "Chatbots are one of the most common, everyday ways people directly interact with AI today.",
-    "relatedTerms": ["large-language-model", "natural-language-processing"]
+    "relatedTerms": [
+      "large-language-model",
+      "natural-language-processing"
+    ]
   },
   {
     "id": "sentiment-analysis",
@@ -285,7 +400,9 @@
     "definition": "An AI technique that determines whether a piece of text expresses a positive, negative, or neutral feeling.",
     "everydayExample": "A company scanning thousands of product reviews to see whether customers are generally happy or unhappy.",
     "whyItMatters": "Sentiment analysis helps businesses and researchers quickly understand large amounts of text-based opinion.",
-    "relatedTerms": ["natural-language-processing"]
+    "relatedTerms": [
+      "natural-language-processing"
+    ]
   },
   {
     "id": "robotics",
@@ -293,7 +410,10 @@
     "definition": "The field that combines engineering and AI to build physical machines that can sense their surroundings and act in the real world.",
     "everydayExample": "A warehouse robot that uses AI-powered vision to pick specific items off a shelf.",
     "whyItMatters": "Pairing AI with robotics is extending automation from screens into physical tasks like manufacturing and logistics.",
-    "relatedTerms": ["computer-vision", "autonomous-ai"]
+    "relatedTerms": [
+      "computer-vision",
+      "autonomous-ai"
+    ]
   },
   {
     "id": "vector-database",
@@ -301,7 +421,10 @@
     "definition": "A specialized database that stores embeddings so an AI system can quickly search for the most similar pieces of information by meaning, not just exact text matches.",
     "everydayExample": "A customer support tool that instantly finds the most relevant help article for a question, even if the wording doesn't match exactly.",
     "whyItMatters": "Vector databases are a key piece of infrastructure behind many retrieval-augmented AI tools.",
-    "relatedTerms": ["embeddings", "retrieval-augmented-generation"]
+    "relatedTerms": [
+      "embeddings",
+      "retrieval-augmented-generation"
+    ]
   },
   {
     "id": "model-weights",
@@ -309,7 +432,10 @@
     "definition": "The specific numerical values a neural network learns during training; downloading a model's weights means downloading its learned knowledge.",
     "everydayExample": "When developers talk about \"open-weight\" models, they mean the trained numerical values are available for anyone to download and run.",
     "whyItMatters": "Access to model weights determines whether a model can be run independently, inspected, or modified by outside developers.",
-    "relatedTerms": ["open-source-ai", "parameters"]
+    "relatedTerms": [
+      "open-source-ai",
+      "parameters"
+    ]
   },
   {
     "id": "attention-mechanism",
@@ -317,7 +443,10 @@
     "definition": "A technique that lets an AI model weigh which parts of the input are most relevant when producing each part of its output.",
     "everydayExample": "When translating a long sentence, an attention mechanism helps the model focus on the specific words that matter most for each translated word.",
     "whyItMatters": "Attention is the core idea that makes transformer-based models so good at understanding context in long passages.",
-    "relatedTerms": ["transformer", "neural-network"]
+    "relatedTerms": [
+      "transformer",
+      "neural-network"
+    ]
   },
   {
     "id": "edge-ai",
@@ -325,7 +454,10 @@
     "definition": "Running AI models directly on a local device, like a phone or camera, instead of sending data to a remote server.",
     "everydayExample": "A phone's camera app recognizing faces for autofocus without sending any photos to the internet.",
     "whyItMatters": "Edge AI can be faster and more private, since data doesn't have to travel to and from a distant server.",
-    "relatedTerms": ["inference", "computer-vision"]
+    "relatedTerms": [
+      "inference",
+      "computer-vision"
+    ]
   },
   {
     "id": "synthetic-data",
@@ -333,7 +465,10 @@
     "definition": "Artificially generated data, created by a computer rather than collected from real-world events, used to train or test AI models.",
     "everydayExample": "Generating thousands of simulated road scenes to help train a self-driving car's AI without needing that many real drives.",
     "whyItMatters": "Synthetic data can fill gaps where real data is scarce, expensive, or sensitive to collect.",
-    "relatedTerms": ["dataset", "model-training"]
+    "relatedTerms": [
+      "dataset",
+      "model-training"
+    ]
   },
   {
     "id": "ai-regulation",
@@ -341,7 +476,10 @@
     "definition": "Laws and government rules that set requirements or limits on how AI systems can be built, sold, or used.",
     "everydayExample": "A law requiring companies to disclose when a photo or video was generated or altered by AI.",
     "whyItMatters": "Regulation shapes what AI companies are allowed to build and how much transparency the public gets about AI systems.",
-    "relatedTerms": ["ai-safety", "bias-in-ai"]
+    "relatedTerms": [
+      "ai-safety",
+      "bias-in-ai"
+    ]
   },
   {
     "id": "copilot",
@@ -349,6 +487,20 @@
     "definition": "An AI assistant built into a piece of software to help a person complete tasks faster, while the person stays in control.",
     "everydayExample": "An AI feature inside a spreadsheet app that suggests formulas or summarizes a table when asked.",
     "whyItMatters": "Copilot-style tools are one of the most common ways everyday software is adding AI features for work.",
-    "relatedTerms": ["ai-agent", "tool-use"]
+    "relatedTerms": [
+      "ai-agent",
+      "tool-use"
+    ]
+  },
+  {
+    "id": "data-center",
+    "term": "Data Center",
+    "definition": "A large facility packed with computer servers, used to store data and run large-scale computing tasks, including training and running AI models.",
+    "everydayExample": "When a company announces a new multi-billion-dollar data center, it's building the physical infrastructure its AI systems actually run on.",
+    "whyItMatters": "The massive data center construction boom driven by AI is reshaping energy use, local economies, and environmental debates worldwide.",
+    "relatedTerms": [
+      "gpu",
+      "model-training"
+    ]
   }
 ]

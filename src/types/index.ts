@@ -16,7 +16,8 @@ export interface NewsStory {
   category: NewsCategory
   publishedAt: string // ISO timestamp, from the source
   fetchedAt: string // ISO timestamp, when our pipeline retrieved it
-  summary: string[] // exactly 5 bullet points when fully qualified
+  quickScoop?: string // 25-40 word hook: what happened and why it's interesting. Optional for backward compat with digests generated before this field existed.
+  summary: string[] // five key takeaways, ~8-16 words each, when fully qualified
   whyItMatters: string
   keyTerms: string[] // glossary term IDs mentioned in this story
   readingTimeMinutes: number
@@ -31,6 +32,7 @@ export interface DailyDigest {
   lastSuccessfulUpdate: string // ISO timestamp
   status: DigestStatus
   stories: NewsStory[]
+  moreStories?: NewsStory[] // additional qualifying stories for "Give Me 5 More", beyond the primary 5
   termOfTheDayCandidateIds: string[] // glossary IDs surfaced by this digest's stories
 }
 

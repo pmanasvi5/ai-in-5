@@ -9,12 +9,12 @@
 
   body {
     @apply bg-bg-light dark:bg-bg-dark text-ink-light dark:text-ink-dark antialiased;
-    font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+    font-family: 'DM Sans', system-ui, sans-serif;
     min-height: 100vh;
   }
 
   h1, h2, h3, h4 {
-    @apply tracking-tight;
+    @apply font-display tracking-tight;
   }
 
   :focus-visible {
@@ -24,7 +24,12 @@
 
 @layer components {
   .card {
-    @apply bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-card shadow-soft dark:shadow-softDark;
+    @apply bg-surface-light dark:bg-surface-dark border border-border-light dark:border-border-dark rounded-card shadow-soft dark:shadow-softDark
+      transition-shadow duration-200;
+  }
+
+  .card-interactive {
+    @apply hover:shadow-lift dark:hover:shadow-liftDark;
   }
 
   .btn-primary {
@@ -36,6 +41,11 @@
     @apply inline-flex items-center justify-center gap-2 rounded-full border border-border-light dark:border-border-dark
       text-ink-light dark:text-ink-dark font-medium px-5 py-2.5 transition-colors duration-150
       hover:bg-accent-light/40 dark:hover:bg-white/5 active:scale-95;
+  }
+
+  .btn-coral {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-coral text-white font-semibold px-5 py-2.5
+      transition-transform duration-150 active:scale-95 hover:brightness-110 disabled:opacity-50 disabled:pointer-events-none;
   }
 
   .pill {

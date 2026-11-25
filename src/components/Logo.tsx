@@ -3,20 +3,32 @@ interface LogoProps {
   withWordmark?: boolean
 }
 
-/** The AI in 5 mark: a soft rounded tile with a five-point "spark" motif, standing in for the five daily stories. */
+/**
+ * The AI in 5 mark: a bold numeral 5 on an electric-blue tile, with a coral
+ * accent dot standing in for a speech-bubble tail — "five stories,
+ * explained simply," without the brain/robot/circuit AI cliches.
+ */
 export function Logo({ size = 32, withWordmark = false }: LogoProps) {
   return (
     <div className="flex items-center gap-2">
       <svg width={size} height={size} viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <rect width="40" height="40" rx="12" fill="#8B7CE8" />
-        <path
-          d="M20 9 L23.2 17.4 L32 20 L23.2 22.6 L20 31 L16.8 22.6 L8 20 L16.8 17.4 Z"
-          fill="#FAF9F6"
-        />
+        <rect width="40" height="40" rx="10.5" fill="#1E46E6" />
+        <text
+          x="17"
+          y="29"
+          textAnchor="middle"
+          fontFamily="'DM Sans', system-ui, sans-serif"
+          fontWeight="800"
+          fontSize="24"
+          fill="#FDF9F2"
+        >
+          5
+        </text>
+        <circle cx="27.5" cy="27.5" r="4" fill="#FF6B4A" />
       </svg>
       {withWordmark && (
-        <span className="font-bold text-lg tracking-tight text-ink-light dark:text-ink-dark">
-          AI in 5
+        <span className="font-display font-semibold text-lg tracking-tight text-ink-light dark:text-ink-dark">
+          AI in <span className="text-accent dark:text-accent-dark">5</span>
         </span>
       )}
     </div>
