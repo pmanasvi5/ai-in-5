@@ -24,7 +24,7 @@ export function GlossaryCard({ term, isLearned, learnedAt, onGotIt, onReviewAgai
       >
         <div className="flex items-center gap-2.5 min-w-0">
           {isLearned && (
-            <span className="flex items-center justify-center w-5 h-5 rounded-full bg-sage/40 text-ink-light shrink-0">
+            <span className="flex items-center justify-center w-5 h-5 rounded-full bg-teal/40 text-ink-light shrink-0">
               <Check size={12} strokeWidth={3} />
             </span>
           )}
@@ -36,12 +36,12 @@ export function GlossaryCard({ term, isLearned, learnedAt, onGotIt, onReviewAgai
       {open && (
         <div className="px-4 pb-4 flex flex-col gap-3 text-sm animate-fade-up">
           <p className="leading-relaxed">{term.definition}</p>
-          <div className="rounded-xl bg-sage/15 p-3">
-            <p className="text-xs font-bold uppercase tracking-wide text-muted-light dark:text-muted-dark mb-1">Example</p>
+          <div className="rounded-xl bg-teal-light dark:bg-teal/10 p-3">
+            <p className="text-xs font-bold uppercase tracking-wide text-teal dark:text-teal-dark mb-1">Example</p>
             <p className="leading-relaxed">{term.everydayExample}</p>
           </div>
           <div className="rounded-xl bg-accent-light/50 dark:bg-accent/10 p-3">
-            <p className="text-xs font-bold uppercase tracking-wide text-accent mb-1">Why it matters</p>
+            <p className="text-xs font-bold uppercase tracking-wide text-accent dark:text-accent-dark mb-1">Why it matters</p>
             <p className="leading-relaxed">{term.whyItMatters}</p>
           </div>
 

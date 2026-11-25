@@ -59,6 +59,9 @@ def strip_html(raw: str) -> str:
     text = html.unescape(text)
     text = unicodedata.normalize("NFKC", text)
     text = re.sub(r"\s+", " ", text).strip()
+    # Removing an inline link (e.g. "...according to <a>Kabas</a>.") can leave
+    # a stray space before the punctuation that followed it ("Kabas .").
+    text = re.sub(r"\s+([.,;:!?])", r"\1", text)
     return text
 
 
@@ -102,9 +105,45 @@ def tag_key_terms(text: str, glossary: list[dict]) -> list[str]:
     return matches
 
 
-def estimate_reading_minutes(bullets: list[str], why_it_matters: str) -> int:
-    words = sum(len(b.split()) for b in bullets) + len(why_it_matters.split())
+def estimate_reading_minutes(bullets: list[str], why_it_matters: str, quick_scoop: str = "") -> int:
+    words = sum(len(b.split()) for b in bullets) + len(why_it_matters.split()) + len(quick_scoop.split())
     return max(1, round(words / 200 * 5))  # ~200 wpm, biased toward a quick skim time
+
+
+# Clichéd AI-news-summary openings to reject, whether from a generative
+# model or (defensively) from source text itself. Checked against the start
+# of the quick scoop, case-insensitively.
+BANNED_OPENINGS = [
+    "in today's rapidly evolving",
+    "in today's fast-paced",
+    "this groundbreaking",
+    "artificial intelligence continues to",
+    "in a significant development",
+    "in a major development",
+    "in an exciting development",
+    "as ai continues to",
+    "in the ever-evolving",
+    "in the rapidly evolving world of",
+]
+
+
+def starts_with_banned_opening(text: str) -> bool:
+    lower = text.strip().lower()
+    return any(lower.startswith(phrase) for phrase in BANNED_OPENINGS)
+
+
+# Guidance on how to open the "quick scoop" for each category, so five
+# stories in one digest don't all read like the same mad-libs template.
+CATEGORY_OPENING_HINTS = {
+    "New Models": "Lead with what the new model or product actually does.",
+    "Tools & Apps": "Lead with what the tool does and who can use it.",
+    "Company News": "Lead with the concrete event (who did what), not vague company framing.",
+    "Business & Work": "Lead with the verified financial or workplace impact.",
+    "Policy & Regulation": "Lead with who is affected and what changes for them.",
+    "Safety & Security": "Lead with the actual risk, incident, or finding.",
+    "Research": "Lead with the discovery or result itself.",
+    "Health & Education": "Lead with the concrete effect on patients, students, or care/learning.",
+}
 
 
 @dataclass

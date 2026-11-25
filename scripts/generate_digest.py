@@ -17,7 +17,11 @@ import fetch_news
 import normalize_news
 import rank_stories
 import summarize_news
+from glossary_discovery import discover_and_update_glossary
 from common import ARCHIVE_DIR, DATA_DIR, EDITORIAL_TZ, editorial_today_str, load_glossary, now_iso
+
+PRIMARY_STORY_COUNT = 5
+MORE_STORY_COUNT = 5
 
 LATEST_PATH = DATA_DIR / "latest.json"
 ARCHIVE_INDEX_PATH = DATA_DIR / "archive-index.json"
@@ -87,20 +91,31 @@ def main():
                     "lastSuccessfulUpdate": now_iso(),
                     "status": "partial",
                     "stories": [],
+                    "moreStories": [],
                     "termOfTheDayCandidateIds": [],
                 },
             )
         return
 
-    status = "ok" if len(stories) >= 5 else "partial"
+    try:
+        stories = discover_and_update_glossary(stories)
+    except Exception:
+        print("Glossary discovery failed (non-fatal, digest still publishes):", file=sys.stderr)
+        traceback.print_exc()
+
+    primary = stories[:PRIMARY_STORY_COUNT]
+    more = stories[PRIMARY_STORY_COUNT : PRIMARY_STORY_COUNT + MORE_STORY_COUNT]
+
+    status = "ok" if len(primary) >= PRIMARY_STORY_COUNT else "partial"
     digest = {
         "digestDate": today,
         "editorialTimezone": "America/New_York",
         "generatedAt": now_iso(),
         "lastSuccessfulUpdate": now_iso(),
         "status": status,
-        "stories": stories,
-        "termOfTheDayCandidateIds": term_of_the_day_candidates(stories),
+        "stories": primary,
+        "moreStories": more,
+        "termOfTheDayCandidateIds": term_of_the_day_candidates(primary + more),
     }
 
     write_json(LATEST_PATH, digest)
@@ -108,11 +123,11 @@ def main():
 
     index = read_json(ARCHIVE_INDEX_PATH, [])
     index = [e for e in index if e["digestDate"] != today]
-    index.append({"digestDate": today, "storyCount": len(stories)})
+    index.append({"digestDate": today, "storyCount": len(primary)})
     index.sort(key=lambda e: e["digestDate"], reverse=True)
     write_json(ARCHIVE_INDEX_PATH, index)
 
-    print(f"\nDigest for {today}: {len(stories)} stories, status={status}")
+    print(f"\nDigest for {today}: {len(primary)} stories (+{len(more)} more available), status={status}")
     print(f"Wrote {LATEST_PATH}, archive/{today}.json, and archive-index.json")
 
 

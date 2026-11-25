@@ -13,9 +13,9 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
-from common import strip_html, tag_key_terms, categorize  # noqa: E402
+from common import strip_html, tag_key_terms, categorize, starts_with_banned_opening  # noqa: E402
 from normalize_news import deduplicate, headline_similarity  # noqa: E402
-from summarize_news import extractive_bullets, split_sentences  # noqa: E402
+from summarize_news import extractive_summarize, split_sentences, trim_to_word_budget  # noqa: E402
 
 GLOSSARY = [
     {"id": "edge-ai", "term": "Edge AI", "definition": "", "everydayExample": "", "whyItMatters": "", "relatedTerms": []},
@@ -73,35 +73,85 @@ class TestExtractiveSummarizer(unittest.TestCase):
     def test_rejects_story_with_too_little_source_text(self):
         article = {
             "headline": "Short news item",
-            "raw_text": "Brief update.",
+            "raw_text": "Brief update. Nothing more to say here really.",
             "source": "Test Source",
             "category": "Tools & Apps",
         }
-        self.assertIsNone(extractive_bullets(article))
+        self.assertIsNone(extractive_summarize(article))
 
     def test_accepts_story_with_enough_source_text(self):
         article = {
             "headline": "A new AI tool was released today",
             "raw_text": (
-                "The company announced a new AI tool for developers. "
-                "It integrates with existing workflows and is available immediately. "
-                "Early users report significant time savings on repetitive tasks."
+                "The company announced a new AI tool for developers this week. "
+                "It integrates with existing workflows and is available immediately to all users. "
+                "Early users report significant time savings on repetitive tasks they used to do by hand. "
+                "The tool also supports a plugin system for custom extensions built by the community."
             ),
             "source": "Test Source",
             "category": "Tools & Apps",
         }
-        bullets = extractive_bullets(article)
-        self.assertIsNotNone(bullets)
-        self.assertEqual(len(bullets), 5)
-        # Every bullet must trace back to real text (headline, source body, or the honest attribution line).
-        for bullet in bullets:
-            self.assertTrue(len(bullet) > 0)
+        result = extractive_summarize(article)
+        self.assertIsNotNone(result)
+        self.assertTrue(result["quickScoop"])
+        self.assertGreaterEqual(len(result["takeaways"]), 2)
+        self.assertLessEqual(len(result["takeaways"]), 5)
+        self.assertTrue(result["whyItMatters"])
 
     def test_filters_newsletter_boilerplate(self):
         text = "This is today's edition of our newsletter. Sign up here for more. A real fact about the AI model's release date was announced."
         sentences = split_sentences(text)
         self.assertTrue(all("sign up" not in s.lower() for s in sentences))
         self.assertTrue(all("today's edition" not in s.lower() for s in sentences))
+
+    def test_trims_long_text_to_word_budget_with_ellipsis(self):
+        long_text = " ".join(f"word{i}" for i in range(50))
+        trimmed = trim_to_word_budget(long_text, 16)
+        self.assertEqual(len(trimmed.split()), 16)  # ellipsis is attached to the last word, not a separate token
+        self.assertTrue(trimmed.endswith("…"))
+
+    def test_leaves_short_text_unchanged(self):
+        short_text = "This is short enough."
+        self.assertEqual(trim_to_word_budget(short_text, 16), short_text)
+
+
+class TestBannedOpenings(unittest.TestCase):
+    def test_flags_cliche_opening(self):
+        self.assertTrue(starts_with_banned_opening("In today's rapidly evolving AI landscape, a new model emerged."))
+
+    def test_allows_normal_opening(self):
+        self.assertFalse(starts_with_banned_opening("OpenAI released a new model on Tuesday that can browse the web."))
+
+
+class TestGlossaryDiscovery(unittest.TestCase):
+    def test_promotes_mentioned_seed_term(self):
+        from glossary_discovery import promote_from_seed_pool
+
+        glossary = [{"id": "ai-agent", "term": "AI Agent", "definition": "", "everydayExample": "", "whyItMatters": "", "relatedTerms": []}]
+        seed_pool = [
+            {"id": "gpu", "term": "GPU", "definition": "d", "everydayExample": "e", "whyItMatters": "w", "relatedTerms": []},
+            {"id": "mixture-of-experts", "term": "Mixture of Experts", "definition": "d", "everydayExample": "e", "whyItMatters": "w", "relatedTerms": []},
+        ]
+        stories = [{"headline": "New chip uses more GPU power than ever", "quickScoop": "", "whyItMatters": "", "summary": []}]
+
+        promoted = promote_from_seed_pool(stories, glossary, seed_pool)
+
+        self.assertEqual([t["id"] for t in promoted], ["gpu"])
+        self.assertIn("gpu", {t["id"] for t in glossary})
+        self.assertEqual([t["id"] for t in seed_pool], ["mixture-of-experts"])  # only the unmentioned term remains
+
+    def test_does_not_promote_unmentioned_terms(self):
+        from glossary_discovery import promote_from_seed_pool
+
+        glossary = []
+        seed_pool = [{"id": "gpu", "term": "GPU", "definition": "d", "everydayExample": "e", "whyItMatters": "w", "relatedTerms": []}]
+        stories = [{"headline": "A story about something unrelated", "quickScoop": "", "whyItMatters": "", "summary": []}]
+
+        promoted = promote_from_seed_pool(stories, glossary, seed_pool)
+
+        self.assertEqual(promoted, [])
+        self.assertEqual(glossary, [])
+        self.assertEqual(len(seed_pool), 1)
 
 
 if __name__ == "__main__":

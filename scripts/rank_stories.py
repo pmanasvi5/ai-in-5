@@ -1,13 +1,18 @@
-"""Ranks normalized, deduplicated stories and selects up to 5 for the daily
-digest, favoring recency, source credibility, and impact, while
-diversifying across categories rather than letting one topic dominate.
+"""Ranks normalized, deduplicated stories and selects a generous candidate
+pool for the daily digest, favoring recency, source credibility, and
+impact, while diversifying across categories rather than letting one topic
+dominate. The pool is larger than the 5 stories actually shown so that
+summarization rejections (insufficient source material) don't leave gaps,
+and so there's a real pool left over for "Give Me 5 More" -- generate_digest.py
+splits the successfully-summarized results into the primary 5 and up to 5
+more, in ranked order.
 """
 from __future__ import annotations
 
 import json
 from datetime import datetime, timezone
 
-MAX_STORIES = 5
+CANDIDATE_POOL_SIZE = 15
 
 IMPACT_KEYWORDS = [
     "launch", "unveil", "announc", "breakthrough", "billion", "million", "funding",
@@ -73,7 +78,7 @@ def main():
     for article in articles:
         article["_score"] = round(score_article(article), 4)
 
-    selected = select_diverse_top(articles, MAX_STORIES)
+    selected = select_diverse_top(articles, CANDIDATE_POOL_SIZE)
     selected.sort(key=lambda a: a["_score"], reverse=True)
 
     print(f"Selected {len(selected)} of {len(articles)} candidates:")

@@ -1,0 +1,449 @@
+[
+  {
+    "id": "gpu",
+    "term": "GPU",
+    "definition": "A graphics processing unit \u2014 a chip originally built for video game graphics that turns out to be extremely good at the math behind AI, so it's now the main hardware AI companies buy to train and run models.",
+    "everydayExample": "When a company says it bought thousands of GPUs, it means it bought thousands of these specialized chips to power its AI systems.",
+    "whyItMatters": "GPU supply and cost are one of the biggest bottlenecks in how fast AI companies can build and run new models.",
+    "relatedTerms": [
+      "ai-chip",
+      "model-training",
+      "inference"
+    ]
+  },
+  {
+    "id": "ai-chip",
+    "term": "AI Chip",
+    "definition": "A computer chip specifically designed to run AI calculations efficiently, as opposed to general-purpose chips built for everyday computing tasks.",
+    "everydayExample": "A phone's AI chip is what lets it recognize faces in photos quickly without sending the photo to the internet.",
+    "whyItMatters": "Who makes and controls the best AI chips has become a major factor in both business competition and international politics.",
+    "relatedTerms": [
+      "gpu",
+      "edge-ai"
+    ]
+  },
+  {
+    "id": "scaling-laws",
+    "term": "Scaling Laws",
+    "definition": "Observed patterns showing that AI models tend to get more capable in predictable ways as they're trained with more data, more computing power, and more parameters.",
+    "everydayExample": "Scaling laws are why AI companies keep building bigger, more expensive training systems \u2014 the pattern has reliably produced better results so far.",
+    "whyItMatters": "Scaling laws have driven much of the AI industry's strategy and spending, though experts debate how long the pattern will keep holding.",
+    "relatedTerms": [
+      "model-training",
+      "parameters",
+      "emergent-abilities"
+    ]
+  },
+  {
+    "id": "mixture-of-experts",
+    "term": "Mixture of Experts",
+    "definition": "A model design where only a small, relevant subset of the model's internal parts activates for any given question, instead of the whole model working every time.",
+    "everydayExample": "It's a bit like routing a customer service question to the one specialist who actually handles it, instead of every employee looking at it.",
+    "whyItMatters": "This design lets companies build larger, more capable models that are still relatively fast and cheap to run.",
+    "relatedTerms": [
+      "parameters",
+      "inference"
+    ]
+  },
+  {
+    "id": "quantization",
+    "term": "Quantization",
+    "definition": "A technique that shrinks an AI model's size by storing its internal numbers with less precision, making it faster and cheaper to run with only a small loss in accuracy.",
+    "everydayExample": "Quantization is often what makes it possible to run a capable AI model directly on a phone or laptop instead of needing a data center.",
+    "whyItMatters": "It's a key reason AI models have become usable on everyday devices rather than only through the cloud.",
+    "relatedTerms": [
+      "edge-ai",
+      "model-weights"
+    ]
+  },
+  {
+    "id": "reasoning-model",
+    "term": "Reasoning Model",
+    "definition": "An AI model specifically trained to work through multi-step problems carefully, often showing its intermediate steps, rather than jumping straight to an answer.",
+    "everydayExample": "A reasoning model asked a tricky math or logic question will work through steps like a person solving it on paper, rather than guessing.",
+    "whyItMatters": "Reasoning models tend to be notably better at complex tasks like coding, math, and planning than earlier AI models.",
+    "relatedTerms": [
+      "large-language-model",
+      "chain-of-thought"
+    ]
+  },
+  {
+    "id": "chain-of-thought",
+    "term": "Chain of Thought",
+    "definition": "A technique where an AI model writes out its intermediate reasoning steps before giving a final answer, which tends to improve accuracy on harder problems.",
+    "everydayExample": "It's similar to a student showing their work on a math test instead of just writing the final number.",
+    "whyItMatters": "This approach has become one of the main ways AI companies make models noticeably better at reasoning tasks.",
+    "relatedTerms": [
+      "reasoning-model",
+      "prompt-engineering"
+    ]
+  },
+  {
+    "id": "ai-benchmark",
+    "term": "AI Benchmark",
+    "definition": "A standardized test used to measure and compare how well different AI models perform on specific tasks, like coding, math, or reading comprehension.",
+    "everydayExample": "When a company claims its new model \"beats\" a competitor, it usually means it scored higher on one or more public benchmarks.",
+    "whyItMatters": "Benchmarks are the main public way to compare AI models, though a high score doesn't always mean a model is actually more useful in practice.",
+    "relatedTerms": [
+      "model-training",
+      "reasoning-model"
+    ]
+  },
+  {
+    "id": "zero-shot-learning",
+    "term": "Zero-Shot Learning",
+    "definition": "An AI model's ability to correctly handle a task it was never specifically trained or given examples for, relying only on general knowledge learned during training.",
+    "everydayExample": "Asking a chatbot to translate a sentence into a language it was never explicitly trained to translate, and having it still do a reasonable job.",
+    "whyItMatters": "Strong zero-shot ability is part of what makes modern AI models feel broadly useful instead of narrowly specialized.",
+    "relatedTerms": [
+      "large-language-model",
+      "foundation-model"
+    ]
+  },
+  {
+    "id": "few-shot-learning",
+    "term": "Few-Shot Learning",
+    "definition": "Giving an AI model just a handful of examples of a task within a prompt, so it can pick up the pattern and apply it, without any additional training.",
+    "everydayExample": "Showing a chatbot three example emails in a certain tone, then asking it to write a new one in that same style.",
+    "whyItMatters": "This lets people customize how an AI responds without needing technical skills or retraining the model.",
+    "relatedTerms": [
+      "prompt-engineering",
+      "zero-shot-learning"
+    ]
+  },
+  {
+    "id": "overfitting",
+    "term": "Overfitting",
+    "definition": "A problem where an AI model learns its training data too specifically, including its quirks and noise, so it performs worse on new, real-world situations.",
+    "everydayExample": "It's like a student who memorizes practice test answers instead of understanding the material, then struggles on the real exam.",
+    "whyItMatters": "Overfitting is one of the core challenges researchers manage when training AI models to make sure they generalize well.",
+    "relatedTerms": [
+      "model-training",
+      "dataset"
+    ]
+  },
+  {
+    "id": "synthetic-media",
+    "term": "Synthetic Media",
+    "definition": "Images, audio, or video that are generated or significantly altered by AI, as opposed to being captured directly from the real world.",
+    "everydayExample": "An AI-generated video of a public figure saying something they never actually said is a form of synthetic media.",
+    "whyItMatters": "As synthetic media gets harder to distinguish from the real thing, it raises real concerns about misinformation and trust.",
+    "relatedTerms": [
+      "deepfake",
+      "ai-watermarking",
+      "diffusion-model"
+    ]
+  },
+  {
+    "id": "deepfake",
+    "term": "Deepfake",
+    "definition": "A realistic but fake image, video, or audio clip of a real person, created using AI, often making them appear to say or do something they didn't.",
+    "everydayExample": "A fake video showing a celebrity endorsing a product they've never actually used is a deepfake.",
+    "whyItMatters": "Deepfakes can be used to spread false information or scam people, which is why platforms and lawmakers are increasingly focused on them.",
+    "relatedTerms": [
+      "synthetic-media",
+      "ai-watermarking"
+    ]
+  },
+  {
+    "id": "ai-watermarking",
+    "term": "AI Watermarking",
+    "definition": "Hidden or visible markers embedded in AI-generated content so it can later be identified as machine-made rather than authentic.",
+    "everydayExample": "An AI image generator adding an invisible digital signature to every picture it creates, so other tools can later detect it's AI-made.",
+    "whyItMatters": "Watermarking is one of the main proposed tools for helping people tell real content apart from AI-generated content.",
+    "relatedTerms": [
+      "synthetic-media",
+      "deepfake"
+    ]
+  },
+  {
+    "id": "model-card",
+    "term": "Model Card",
+    "definition": "A short public document that describes an AI model's intended uses, limitations, training data, and known risks, similar to a nutrition label.",
+    "everydayExample": "Before using a new AI model, a developer might check its model card to understand what it's good at and where it tends to fail.",
+    "whyItMatters": "Model cards are a key transparency tool that help people understand an AI system's limits before relying on it.",
+    "relatedTerms": [
+      "ai-safety",
+      "bias-in-ai"
+    ]
+  },
+  {
+    "id": "red-teaming",
+    "term": "Red Teaming",
+    "definition": "The practice of deliberately trying to make an AI system fail, misbehave, or produce harmful output before it's released, in order to find and fix problems.",
+    "everydayExample": "A team intentionally trying tricky or adversarial prompts to see if a chatbot can be fooled into giving dangerous instructions.",
+    "whyItMatters": "Red teaming is one of the main ways AI companies try to catch safety problems before the public ever sees them.",
+    "relatedTerms": [
+      "ai-safety",
+      "guardrails"
+    ]
+  },
+  {
+    "id": "guardrails",
+    "term": "Guardrails",
+    "definition": "Rules, filters, or checks built around an AI system to keep its behavior within safe and intended limits, especially for sensitive topics.",
+    "everydayExample": "A chatbot refusing to give instructions for something dangerous is an example of its guardrails working as intended.",
+    "whyItMatters": "Guardrails are a key part of how companies try to make AI tools safer to use at a large scale.",
+    "relatedTerms": [
+      "ai-safety",
+      "red-teaming",
+      "system-prompt"
+    ]
+  },
+  {
+    "id": "system-prompt",
+    "term": "System Prompt",
+    "definition": "Hidden instructions given to an AI model before a conversation starts, setting its personality, rules, and boundaries without the user seeing them directly.",
+    "everydayExample": "A company's customer service chatbot might have a system prompt telling it to stay polite and only discuss that company's products.",
+    "whyItMatters": "System prompts are a major way companies customize and control how an AI model behaves in their specific product.",
+    "relatedTerms": [
+      "prompt",
+      "guardrails"
+    ]
+  },
+  {
+    "id": "function-calling",
+    "term": "Function Calling",
+    "definition": "A capability that lets an AI model trigger a specific action in another piece of software, like checking a calendar or placing an order, as part of answering a request.",
+    "everydayExample": "An AI assistant that can actually book a restaurant reservation, rather than just describing how you'd book one yourself.",
+    "whyItMatters": "Function calling is what turns a chatbot that can only talk into an assistant that can actually get things done.",
+    "relatedTerms": [
+      "tool-use",
+      "ai-agent"
+    ]
+  },
+  {
+    "id": "multi-agent-system",
+    "term": "Multi-Agent System",
+    "definition": "A setup where several AI agents work together, each handling a different part of a task, instead of one single AI doing everything.",
+    "everydayExample": "One AI agent researching a topic, another drafting a report from that research, and a third reviewing it for errors.",
+    "whyItMatters": "Splitting work across multiple specialized agents can make complex tasks more reliable than relying on a single all-purpose AI.",
+    "relatedTerms": [
+      "ai-agent",
+      "tool-use"
+    ]
+  },
+  {
+    "id": "model-context-protocol",
+    "term": "Model Context Protocol",
+    "definition": "An open standard that lets AI models connect to outside tools, files, and data sources in a consistent way, rather than every company building its own custom connection.",
+    "everydayExample": "It works a bit like a universal charging cable \u2014 instead of a different connector for every device, one standard way lets AI tools plug into many different data sources.",
+    "whyItMatters": "A shared standard like this makes it easier for AI assistants to safely and reliably work with real documents, apps, and services.",
+    "relatedTerms": [
+      "tool-use",
+      "ai-agent",
+      "function-calling"
+    ]
+  },
+  {
+    "id": "explainable-ai",
+    "term": "Explainable AI",
+    "definition": "AI designed or analyzed so that humans can understand why it made a particular decision, rather than it being a total \"black box.\"",
+    "everydayExample": "A loan-approval AI that can show which specific factors led to its decision, instead of just giving a yes-or-no answer.",
+    "whyItMatters": "Explainability matters most in high-stakes areas like healthcare, lending, and hiring, where people deserve to know why an AI made a call.",
+    "relatedTerms": [
+      "bias-in-ai",
+      "ai-regulation"
+    ]
+  },
+  {
+    "id": "ai-ethics",
+    "term": "AI Ethics",
+    "definition": "The study of the moral questions raised by AI, including fairness, privacy, consent, and the broader impact of AI systems on people and society.",
+    "everydayExample": "Debating whether it's acceptable for a company to train an AI model on creative work without the original creators' permission is an AI ethics question.",
+    "whyItMatters": "AI ethics shapes the rules, norms, and expectations that guide how companies are expected to build and deploy AI responsibly.",
+    "relatedTerms": [
+      "ai-safety",
+      "bias-in-ai",
+      "ai-regulation"
+    ]
+  },
+  {
+    "id": "content-moderation-ai",
+    "term": "AI Content Moderation",
+    "definition": "Using AI systems to automatically detect and remove harmful, spammy, or policy-violating content on platforms, usually alongside human reviewers.",
+    "everydayExample": "A social media platform using AI to automatically flag violent or graphic content before a human moderator ever sees it.",
+    "whyItMatters": "AI moderation lets platforms handle enormous volumes of content, but it can also make mistakes that silence legitimate speech.",
+    "relatedTerms": [
+      "bias-in-ai",
+      "natural-language-processing"
+    ]
+  },
+  {
+    "id": "generative-adversarial-network",
+    "term": "Generative Adversarial Network",
+    "definition": "An older AI design where two neural networks compete \u2014 one creates fake content, the other tries to spot the fakes \u2014 and both improve from the contest.",
+    "everydayExample": "Many early AI-generated faces of people who don't exist were created using this technique before newer methods became more common.",
+    "whyItMatters": "This approach was a major early breakthrough in generative AI, even though newer techniques like diffusion models have become more popular since.",
+    "relatedTerms": [
+      "diffusion-model",
+      "synthetic-media"
+    ]
+  },
+  {
+    "id": "text-to-image",
+    "term": "Text-to-Image",
+    "definition": "AI technology that generates an original image from a written description.",
+    "everydayExample": "Typing \"a cat wearing a spacesuit on the moon\" into an AI image tool and getting back a picture matching that description.",
+    "whyItMatters": "Text-to-image tools have made visual content creation accessible to people with no design or illustration background.",
+    "relatedTerms": [
+      "diffusion-model",
+      "generative-ai"
+    ]
+  },
+  {
+    "id": "text-to-video",
+    "term": "Text-to-Video",
+    "definition": "AI technology that generates an original short video clip from a written description, a newer and more computationally demanding step beyond text-to-image.",
+    "everydayExample": "Typing a description of a scene and getting back a several-second AI-generated video clip matching it.",
+    "whyItMatters": "Text-to-video is rapidly improving and raises many of the same opportunities and misinformation concerns as image generation, at a larger scale.",
+    "relatedTerms": [
+      "text-to-image",
+      "synthetic-media",
+      "diffusion-model"
+    ]
+  },
+  {
+    "id": "voice-cloning",
+    "term": "Voice Cloning",
+    "definition": "AI technology that can recreate a specific person's voice from a sample recording, letting it generate new speech that sounds like them.",
+    "everydayExample": "An audiobook company using a narrator's cloned voice to generate new chapters without them recording every word themselves.",
+    "whyItMatters": "Voice cloning raises both useful applications (accessibility, dubbing) and serious risks (scams, impersonation) that are actively being debated.",
+    "relatedTerms": [
+      "synthetic-media",
+      "deepfake"
+    ]
+  },
+  {
+    "id": "humanoid-robot",
+    "term": "Humanoid Robot",
+    "definition": "A robot designed with a human-like body shape \u2014 a head, torso, arms, and legs \u2014 often paired with AI to help it navigate and interact with human environments.",
+    "everydayExample": "A warehouse robot shaped like a person so it can use the same tools, stairs, and shelves originally designed for human workers.",
+    "whyItMatters": "Combining AI with humanoid robots is a major bet in the industry on bringing AI capabilities into physical, real-world work.",
+    "relatedTerms": [
+      "robotics",
+      "ai-agent"
+    ]
+  },
+  {
+    "id": "autonomous-vehicle",
+    "term": "Autonomous Vehicle",
+    "definition": "A vehicle that uses AI, sensors, and cameras to drive itself with little or no human input, at varying levels of independence.",
+    "everydayExample": "A self-driving taxi that picks up and drops off passengers without a human behind the wheel.",
+    "whyItMatters": "Autonomous vehicles are one of the most visible real-world tests of how much everyday people are willing to trust AI with physical safety.",
+    "relatedTerms": [
+      "robotics",
+      "computer-vision"
+    ]
+  },
+  {
+    "id": "ai-bubble",
+    "term": "AI Bubble",
+    "definition": "A term used to describe concern that investment and valuations in AI companies have grown faster than their actual proven business results, similar to past tech investment bubbles.",
+    "everydayExample": "An analyst questioning whether a startup's enormous valuation is justified by its current revenue, rather than just excitement about AI.",
+    "whyItMatters": "Whether or not AI is in a bubble is one of the most actively debated questions in business and financial news coverage of the industry.",
+    "relatedTerms": [
+      "ai-regulation"
+    ]
+  },
+  {
+    "id": "compute-governance",
+    "term": "Compute Governance",
+    "definition": "Policies and rules that attempt to track or control access to the large amounts of computing power needed to train the most advanced AI models.",
+    "everydayExample": "A government requiring companies to report when they use an unusually large amount of computing power to train a new AI model.",
+    "whyItMatters": "Because training the most powerful models requires enormous computing resources, some policymakers see controlling that compute as a way to manage AI risk.",
+    "relatedTerms": [
+      "ai-regulation",
+      "ai-chip"
+    ]
+  },
+  {
+    "id": "catastrophic-forgetting",
+    "term": "Catastrophic Forgetting",
+    "definition": "A problem where an AI model loses previously learned skills or knowledge after being trained further on new information.",
+    "everydayExample": "A model that gets really good at a new specialized task but suddenly performs worse on tasks it used to handle well.",
+    "whyItMatters": "This is a key technical challenge in updating AI models with new knowledge without degrading their existing abilities.",
+    "relatedTerms": [
+      "fine-tuning",
+      "model-training"
+    ]
+  },
+  {
+    "id": "emergent-abilities",
+    "term": "Emergent Abilities",
+    "definition": "Capabilities that show up in large AI models somewhat unexpectedly, which weren't clearly present in smaller versions of the same model.",
+    "everydayExample": "A larger model suddenly becoming noticeably better at multi-step reasoning in a way smaller, earlier versions simply couldn't manage.",
+    "whyItMatters": "Emergent abilities make AI progress harder to fully predict in advance, which is part of why new model releases can still surprise researchers.",
+    "relatedTerms": [
+      "scaling-laws",
+      "parameters"
+    ]
+  },
+  {
+    "id": "knowledge-distillation",
+    "term": "Knowledge Distillation",
+    "definition": "A technique where a smaller AI model is trained to mimic the behavior of a larger, more capable model, aiming to capture similar performance at a fraction of the size.",
+    "everydayExample": "A compact AI model running fast on a phone, trained to copy the judgments of a much larger model that runs in a data center.",
+    "whyItMatters": "Distillation is one of the main ways companies make powerful AI capabilities available in smaller, cheaper, faster packages.",
+    "relatedTerms": [
+      "quantization",
+      "model-training"
+    ]
+  },
+  {
+    "id": "ai-energy-use",
+    "term": "AI Energy Use",
+    "definition": "The electricity consumed by training and running AI models, which has grown large enough to affect power grids and raise environmental questions.",
+    "everydayExample": "A single complex AI-generated response can use meaningfully more electricity than a simple web search.",
+    "whyItMatters": "Rising AI energy demand is a growing factor in debates over data center construction, power grid strain, and climate impact.",
+    "relatedTerms": [
+      "data-center",
+      "model-training"
+    ]
+  },
+  {
+    "id": "ai-literacy",
+    "term": "AI Literacy",
+    "definition": "A basic working understanding of how AI tools function, their strengths, and their limitations \u2014 enough to use them thoughtfully rather than blindly.",
+    "everydayExample": "Knowing that a chatbot can sometimes confidently state wrong information is a basic piece of AI literacy.",
+    "whyItMatters": "As AI tools become more common in daily life and work, understanding their basics is increasingly treated like a general life skill.",
+    "relatedTerms": [
+      "ai-hallucination",
+      "artificial-intelligence"
+    ]
+  },
+  {
+    "id": "enterprise-ai",
+    "term": "Enterprise AI",
+    "definition": "AI tools and systems specifically built, sold, and customized for use inside businesses and large organizations, rather than for individual consumers.",
+    "everydayExample": "A company-wide AI assistant trained on a business's own internal documents to help employees find information faster.",
+    "whyItMatters": "Enterprise AI is one of the largest and fastest-growing parts of the AI industry's revenue, distinct from consumer chatbot apps.",
+    "relatedTerms": [
+      "fine-tuning",
+      "ai-agent"
+    ]
+  },
+  {
+    "id": "data-poisoning",
+    "term": "Data Poisoning",
+    "definition": "A security attack where someone deliberately inserts bad or misleading information into an AI model's training data to corrupt its behavior.",
+    "everydayExample": "Secretly feeding a model false information during training so that it later gives a wrong answer to a specific, targeted question.",
+    "whyItMatters": "Data poisoning is a real security concern as AI systems increasingly train on large amounts of data scraped from the open internet.",
+    "relatedTerms": [
+      "dataset",
+      "ai-safety"
+    ]
+  },
+  {
+    "id": "prompt-injection",
+    "term": "Prompt Injection",
+    "definition": "A security attack where hidden instructions are embedded in content an AI reads, tricking it into ignoring its original instructions or doing something unintended.",
+    "everydayExample": "A webpage containing hidden text instructing any AI assistant reading it to reveal private information, disguised so a human wouldn't notice it.",
+    "whyItMatters": "Prompt injection is one of the main security risks as AI agents increasingly browse the web and handle sensitive tasks on people's behalf.",
+    "relatedTerms": [
+      "ai-agent",
+      "guardrails",
+      "ai-safety"
+    ]
+  }
+]
