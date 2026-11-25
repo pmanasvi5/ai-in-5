@@ -8,7 +8,7 @@ const DESTINATIONS = [
   { to: '/', label: 'Today', icon: Newspaper },
   { to: '/learn', label: 'Learn AI', icon: GraduationCap },
   { to: '/saved', label: 'Saved', icon: Bookmark },
-  { to: '/archive', label: 'Archive', icon: Archive },
+  { to: '/archive', label: 'Explore', icon: Archive },
 ]
 
 const FONT_SIZE_CYCLE: UserPreferences['fontSize'][] = ['small', 'medium', 'large']

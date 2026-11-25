@@ -37,4 +37,8 @@ export const STORAGE_KEYS = {
   preferences: 'preferences',
   readStoryIds: 'read-story-ids',
   theme: 'theme',
+  challengeProgress: 'challenge-progress',
+  activityProgress: 'activity-progress',
+  dailyJourney: 'daily-journey',
+  milestonesSeen: 'milestones-seen',
 } as const

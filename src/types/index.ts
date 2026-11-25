@@ -8,6 +8,15 @@ export type NewsCategory =
   | 'Research'
   | 'Health & Education'
 
+/** A prior, conservatively-matched mention of the same ongoing development. */
+export interface PreviousMention {
+  date: string // YYYY-MM-DD, the editorial date it was covered
+  headline: string
+  url: string
+}
+
+export type FollowUpLabel = 'New Development' | 'Story Update' | 'Previously Covered' | 'Major Announcement'
+
 export interface NewsStory {
   id: string
   headline: string
@@ -21,9 +30,37 @@ export interface NewsStory {
   whyItMatters: string
   keyTerms: string[] // glossary term IDs mentioned in this story
   readingTimeMinutes: number
+  threadId?: string // stable id grouping this story with earlier coverage of the same development
+  followUpLabel?: FollowUpLabel // shown only when previousMentions is non-empty
+  previousMentions?: PreviousMention[] // conservatively-matched earlier coverage; omitted (not empty) when linking isn't confident
+  simplerExplanation?: string // "Explain It Simpler": shorter, jargon-free rewrite of quickScoop. Omitted when the source doesn't support a reliable simplification.
 }
 
 export type DigestStatus = 'ok' | 'stale' | 'partial'
+
+export interface DailyChallengeOption {
+  text: string
+}
+
+export interface DailyChallenge {
+  id: string
+  digestDate: string
+  question: string
+  choices: string[] // exactly 4
+  correctIndex: number
+  explanation: string
+  sourceStoryId?: string
+  sourceTermId?: string
+}
+
+export interface DailyActivity {
+  id: string
+  title: string
+  learningObjective: string // "What you'll learn"
+  tryThis: string // the example prompt/exercise
+  whyItWorks: string
+  category: 'school' | 'work' | 'creative' | 'everyday'
+}
 
 export interface DailyDigest {
   digestDate: string // YYYY-MM-DD, editorial date
@@ -34,6 +71,8 @@ export interface DailyDigest {
   stories: NewsStory[]
   moreStories?: NewsStory[] // additional qualifying stories for "Give Me 5 More", beyond the primary 5
   termOfTheDayCandidateIds: string[] // glossary IDs surfaced by this digest's stories
+  dailyChallenge?: DailyChallenge
+  dailyActivity?: DailyActivity
 }
 
 export interface GlossaryTerm {
@@ -73,4 +112,15 @@ export interface UserPreferences {
 export interface ArchiveIndexEntry {
   digestDate: string
   storyCount: number
+}
+
+/** One row of the generated client-side search index (public/data/search-index.json) — deliberately minimal so the whole archive's index stays small to load upfront. */
+export interface SearchIndexEntry {
+  id: string
+  digestDate: string
+  headline: string
+  source: string
+  category: NewsCategory
+  keyTerms: string[]
+  url: string
 }

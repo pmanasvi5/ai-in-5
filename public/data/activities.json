@@ -1,0 +1,194 @@
+[
+  {
+    "id": "explain-anything-simply",
+    "title": "Make AI explain anything simply",
+    "learningObjective": "How to make difficult topics easier to understand.",
+    "tryThis": "Explain [topic] like I'm completely new to it. Use one simple analogy and one everyday example.",
+    "whyItWorks": "Giving AI clearer instructions about your level of knowledge helps it tailor the explanation instead of defaulting to jargon.",
+    "category": "everyday"
+  },
+  {
+    "id": "plan-a-study-schedule",
+    "title": "Plan a study schedule that actually fits your week",
+    "learningObjective": "How to turn a vague study goal into a concrete plan.",
+    "tryThis": "I have [exam/topic] in [X days] and about [Y hours] a week free. Break this into a day-by-day study plan with specific tasks.",
+    "whyItWorks": "AI is good at breaking a big, fuzzy goal into small, scheduled steps once you give it real constraints.",
+    "category": "school"
+  },
+  {
+    "id": "prep-for-interview",
+    "title": "Prepare for a job interview",
+    "learningObjective": "How to rehearse answers to common interview questions.",
+    "tryThis": "I'm interviewing for [role] at a [type of company]. Ask me 5 common interview questions for this role, one at a time, and give feedback on my answers.",
+    "whyItWorks": "Practicing out loud with feedback helps more than just reading generic interview tips.",
+    "category": "work"
+  },
+  {
+    "id": "organize-a-to-do-list",
+    "title": "Turn a messy to-do list into a real plan",
+    "learningObjective": "How to prioritize tasks instead of just listing them.",
+    "tryThis": "Here's my to-do list: [paste it]. Group these into 'urgent', 'important but not urgent', and 'can wait', and suggest what to tackle first.",
+    "whyItWorks": "AI can spot patterns and dependencies in a list faster than staring at it yourself.",
+    "category": "work"
+  },
+  {
+    "id": "brainstorm-creative-ideas",
+    "title": "Brainstorm past your first five ideas",
+    "learningObjective": "How to use AI to get unstuck during brainstorming.",
+    "tryThis": "Give me 10 different directions for [project/idea], including at least 3 that are unusual or unexpected.",
+    "whyItWorks": "Asking for quantity and variety up front pushes past the obvious first few ideas everyone thinks of.",
+    "category": "creative"
+  },
+  {
+    "id": "improve-an-email",
+    "title": "Make an awkward email sound right",
+    "learningObjective": "How to adjust tone without losing your point.",
+    "tryThis": "Rewrite this email to sound more [professional/friendly/concise], but keep the same key points: [paste email].",
+    "whyItWorks": "Specifying the tone you want gives AI a clear target, instead of a vague 'make this better.'",
+    "category": "work"
+  },
+  {
+    "id": "understand-a-spreadsheet-formula",
+    "title": "Decode a spreadsheet formula you didn't write",
+    "learningObjective": "How to get a plain-English breakdown of complex formulas.",
+    "tryThis": "Explain what this formula does, step by step, in plain English: [paste formula].",
+    "whyItWorks": "Breaking a formula into its logical steps is often clearer than reading the raw syntax.",
+    "category": "work"
+  },
+  {
+    "id": "learn-a-new-skill-roadmap",
+    "title": "Get a beginner roadmap for a new skill",
+    "learningObjective": "How to turn 'I want to learn X' into actual first steps.",
+    "tryThis": "I want to learn [skill] starting from zero. Give me the first 5 things to focus on, in order, and one small practice exercise for each.",
+    "whyItWorks": "A concrete first-steps list is more actionable than a huge list of everything there is to know.",
+    "category": "everyday"
+  },
+  {
+    "id": "compare-options-before-deciding",
+    "title": "Compare your options side by side",
+    "learningObjective": "How to lay out a decision clearly instead of going in circles.",
+    "tryThis": "I'm deciding between [option A] and [option B] for [goal]. List the real trade-offs of each, not just generic pros and cons.",
+    "whyItWorks": "Asking specifically for trade-offs tied to your actual goal avoids generic, unhelpful lists.",
+    "category": "everyday"
+  },
+  {
+    "id": "practice-a-language",
+    "title": "Practice a conversation in a new language",
+    "learningObjective": "How to get low-pressure speaking/writing practice anytime.",
+    "tryThis": "Let's have a simple conversation in [language] about [everyday topic]. Correct my mistakes gently after each message.",
+    "whyItWorks": "On-demand, judgment-free practice partners are hard to find otherwise, especially for beginners.",
+    "category": "everyday"
+  },
+  {
+    "id": "write-better-prompts",
+    "title": "Write a prompt that actually gets what you want",
+    "learningObjective": "What makes one prompt work better than another.",
+    "tryThis": "Take a request you'd normally type in one vague sentence, and add: the audience, the format you want, and one example of 'good' output. Compare the two results.",
+    "whyItWorks": "Specifics about audience, format, and examples are usually what separates a mediocre AI answer from a great one.",
+    "category": "everyday"
+  },
+  {
+    "id": "understand-a-complex-document",
+    "title": "Get the gist of a dense document fast",
+    "learningObjective": "How to extract the key points from something long and complicated.",
+    "tryThis": "Summarize this in plain English, then list the 3 most important things I need to know or do: [paste document text].",
+    "whyItWorks": "Separating 'what it says' from 'what I need to act on' makes dense text far less overwhelming.",
+    "category": "everyday"
+  },
+  {
+    "id": "mock-interview-for-concept",
+    "title": "Quiz yourself on something you just read",
+    "learningObjective": "How active recall helps ideas actually stick.",
+    "tryThis": "Ask me 3 questions to test whether I really understood [concept/article], then tell me what I got right or missed.",
+    "whyItWorks": "Being asked questions forces real recall, which sticks far better than just re-reading something.",
+    "category": "school"
+  },
+  {
+    "id": "plan-a-presentation",
+    "title": "Structure a presentation from a pile of notes",
+    "learningObjective": "How to turn scattered notes into a clear narrative.",
+    "tryThis": "Here are my rough notes for a presentation on [topic]: [paste notes]. Suggest a clear structure with an opening hook, 3 main points, and a closing takeaway.",
+    "whyItWorks": "AI is good at spotting a logical order in material that feels jumbled to you because you're too close to it.",
+    "category": "work"
+  },
+  {
+    "id": "brainstorm-gift-or-plan-ideas",
+    "title": "Plan something thoughtful without the decision fatigue",
+    "learningObjective": "How to use constraints to get genuinely useful suggestions.",
+    "tryThis": "Suggest 5 ideas for [a gift/an outing/a meal] for someone who likes [specific interests], within a budget of [amount].",
+    "whyItWorks": "The more specific constraints you give, the less generic and more useful the suggestions become.",
+    "category": "everyday"
+  },
+  {
+    "id": "debug-your-own-writing",
+    "title": "Find the weak spots in your own writing",
+    "learningObjective": "How to get specific, actionable feedback instead of vague praise.",
+    "tryThis": "Read this and tell me the single weakest paragraph and why, plus one concrete way to fix it: [paste writing].",
+    "whyItWorks": "Asking for ONE specific weak spot avoids a wall of generic feedback that's hard to act on.",
+    "category": "creative"
+  },
+  {
+    "id": "plan-a-workout-or-habit",
+    "title": "Build a realistic new habit plan",
+    "learningObjective": "How to make a new habit specific enough to actually stick.",
+    "tryThis": "I want to start [habit] but keep failing at it. Ask me about my actual schedule and obstacles, then suggest a realistic version I could stick to for 2 weeks.",
+    "whyItWorks": "Habits fail most often from being too ambitious — tailoring to your real constraints helps more than generic advice.",
+    "category": "everyday"
+  },
+  {
+    "id": "role-play-a-tough-conversation",
+    "title": "Rehearse a tricky conversation before you have it",
+    "learningObjective": "How to think through a hard conversation calmly in advance.",
+    "tryThis": "Play the role of [person] in a conversation where I need to [bring up a raise / address a conflict / etc.]. React realistically so I can practice.",
+    "whyItWorks": "Rehearsing out loud, even with an AI, reduces anxiety and helps you find the right words before it matters.",
+    "category": "work"
+  },
+  {
+    "id": "turn-research-into-an-outline",
+    "title": "Turn scattered research into an outline",
+    "learningObjective": "How to organize research before you start writing.",
+    "tryThis": "Here's everything I've found on [topic]: [paste notes/links/quotes]. Organize this into a logical outline with headings.",
+    "whyItWorks": "Outlining first, separately from writing, usually produces clearer final work than writing and organizing at the same time.",
+    "category": "school"
+  },
+  {
+    "id": "explain-a-chart-or-data",
+    "title": "Make sense of a confusing chart or dataset",
+    "learningObjective": "How to pull the actual takeaway out of raw numbers.",
+    "tryThis": "Here's a chart/table I don't fully understand: [describe or paste it]. What's the single most important trend or takeaway here?",
+    "whyItWorks": "Asking for the single most important takeaway, rather than 'explain this,' keeps the answer focused and useful.",
+    "category": "work"
+  },
+  {
+    "id": "generate-practice-questions",
+    "title": "Create your own practice test",
+    "learningObjective": "How to generate targeted practice material for an exam.",
+    "tryThis": "Based on these topics I need to study: [list them], write 5 practice questions at a moderate difficulty, with an answer key.",
+    "whyItWorks": "Practice testing is one of the most effective study techniques, and AI can generate unlimited fresh questions.",
+    "category": "school"
+  },
+  {
+    "id": "pressure-test-an-idea",
+    "title": "Pressure-test an idea before committing to it",
+    "learningObjective": "How to find holes in your own plan before others do.",
+    "tryThis": "Here's my plan: [describe it]. Play devil's advocate and give me the 3 strongest objections someone might raise.",
+    "whyItWorks": "It's much easier to fix a weak plan when you find the objections yourself, in private, ahead of time.",
+    "category": "work"
+  },
+  {
+    "id": "simplify-legal-or-technical-text",
+    "title": "Translate confusing fine print into plain English",
+    "learningObjective": "How to understand terms, contracts, or technical text before agreeing to them.",
+    "tryThis": "Explain what this actually means for me in plain English, and flag anything that seems like it could matter: [paste text].",
+    "whyItWorks": "Dense legal or technical language is often simpler than it looks once it's restated plainly — just don't skip reading it entirely.",
+    "category": "everyday"
+  },
+  {
+    "id": "creative-writing-warmup",
+    "title": "Warm up a stuck creative project",
+    "learningObjective": "How to use AI as a brainstorming partner, not a ghostwriter.",
+    "tryThis": "I'm stuck on [story/project]. Ask me 5 questions about it that might help me figure out what happens next.",
+    "whyItWorks": "Being asked good questions often unlocks ideas faster than being handed an answer outright.",
+    "category": "creative"
+  }
+]

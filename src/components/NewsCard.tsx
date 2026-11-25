@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import { ChevronDown, Bookmark, ExternalLink } from 'lucide-react'
+import { ChevronDown, Bookmark, ExternalLink, History, Wand2 } from 'lucide-react'
 import type { GlossaryTerm, NewsStory } from '../types'
-import { formatPublishedAt } from '../utils/date'
+import { formatPublishedAt, formatDigestDate } from '../utils/date'
 import { categoryPillClass, categoryBarClass } from '../utils/categoryStyles'
 import { HighlightedText } from './HighlightedText'
 import { ShareButton } from './ShareButton'
@@ -28,6 +28,8 @@ export function NewsCard({
   onExpand,
 }: NewsCardProps) {
   const [open, setOpen] = useState(!!defaultOpen)
+  const [showSimpler, setShowSimpler] = useState(false)
+  const [showTimeline, setShowTimeline] = useState(false)
   const barClass = categoryBarClass(story.category)
 
   function toggleOpen() {
@@ -51,7 +53,7 @@ export function NewsCard({
         className={`w-full text-left flex flex-col gap-3 ${featured ? 'p-6' : 'p-5'}`}
       >
         <div className="flex items-center justify-between gap-3">
-          <div className="flex items-center gap-2.5">
+          <div className="flex items-center gap-2.5 flex-wrap">
             {!featured && (
               <span className="flex items-center justify-center w-7 h-7 rounded-full bg-accent/10 text-accent text-sm font-bold shrink-0">
                 {index + 1}
@@ -60,6 +62,9 @@ export function NewsCard({
             <span className={`pill ${categoryPillClass(story.category)}`}>{story.category}</span>
             {featured && (
               <span className="pill bg-ink-light text-bg-light dark:bg-ink-dark dark:text-bg-dark">Today's top story</span>
+            )}
+            {story.followUpLabel && (
+              <span className="pill bg-plum-light text-plum dark:bg-plum/20 dark:text-plum-dark">{story.followUpLabel}</span>
             )}
           </div>
           <ChevronDown
@@ -86,10 +91,50 @@ export function NewsCard({
 
       {open && (
         <div className={`flex flex-col gap-4 animate-fade-up ${featured ? 'px-6 pb-6' : 'px-5 pb-5'}`}>
+          {story.previousMentions && story.previousMentions.length > 0 && (
+            <div className="rounded-xl border border-border-light dark:border-border-dark p-3.5">
+              <button
+                type="button"
+                onClick={() => setShowTimeline((s) => !s)}
+                className="flex items-center gap-2 text-xs font-bold uppercase tracking-wide text-plum dark:text-plum-dark w-full"
+              >
+                <History size={14} /> Previously on AI...
+                <ChevronDown size={14} className={`ml-auto transition-transform ${showTimeline ? 'rotate-180' : ''}`} />
+              </button>
+              {showTimeline && (
+                <ol className="mt-3 flex flex-col gap-2.5 animate-fade-up">
+                  {story.previousMentions.map((m, i) => (
+                    <li key={i} className="text-sm leading-relaxed">
+                      <span className="text-muted-light dark:text-muted-dark">{formatDigestDate(m.date)}: </span>
+                      <a href={m.url} target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">
+                        {m.headline}
+                      </a>
+                    </li>
+                  ))}
+                </ol>
+              )}
+            </div>
+          )}
+
           {story.quickScoop && (
-            <p className="text-base leading-relaxed">
-              <HighlightedText text={story.quickScoop} keyTermIds={story.keyTerms} glossary={glossary} />
-            </p>
+            <div>
+              <p className="text-base leading-relaxed">
+                <HighlightedText
+                  text={showSimpler && story.simplerExplanation ? story.simplerExplanation : story.quickScoop}
+                  keyTermIds={story.keyTerms}
+                  glossary={glossary}
+                />
+              </p>
+              {story.simplerExplanation && (
+                <button
+                  type="button"
+                  onClick={() => setShowSimpler((s) => !s)}
+                  className="flex items-center gap-1.5 text-xs font-medium text-accent hover:underline mt-2"
+                >
+                  <Wand2 size={12} /> {showSimpler ? 'Show original' : 'Explain it simpler'}
+                </button>
+              )}
+            </div>
           )}
 
           <div>

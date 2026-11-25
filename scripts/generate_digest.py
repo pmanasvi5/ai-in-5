@@ -18,6 +18,9 @@ import normalize_news
 import rank_stories
 import summarize_news
 from glossary_discovery import discover_and_update_glossary
+from story_linking import link_stories
+from enrichment import add_simpler_explanations, build_daily_challenge, select_daily_activity
+from search_index import write_search_index
 from common import ARCHIVE_DIR, DATA_DIR, EDITORIAL_TZ, editorial_today_str, load_glossary, now_iso
 
 PRIMARY_STORY_COUNT = 5
@@ -103,8 +106,38 @@ def main():
         print("Glossary discovery failed (non-fatal, digest still publishes):", file=sys.stderr)
         traceback.print_exc()
 
+    try:
+        stories = link_stories(stories, today)
+        linked = [s for s in stories if s.get("previousMentions")]
+        if linked:
+            print(f"  [story-linking] linked {len(linked)} stories to earlier coverage")
+    except Exception:
+        print("Story linking failed (non-fatal, digest still publishes):", file=sys.stderr)
+        traceback.print_exc()
+
+    try:
+        add_simpler_explanations(stories)
+    except Exception:
+        print("Explain-it-simpler generation failed (non-fatal):", file=sys.stderr)
+        traceback.print_exc()
+
     primary = stories[:PRIMARY_STORY_COUNT]
     more = stories[PRIMARY_STORY_COUNT : PRIMARY_STORY_COUNT + MORE_STORY_COUNT]
+    candidate_term_ids = term_of_the_day_candidates(primary + more)
+
+    daily_challenge = None
+    try:
+        daily_challenge = build_daily_challenge(primary, load_glossary(), candidate_term_ids, today)
+    except Exception:
+        print("Daily challenge generation failed (non-fatal):", file=sys.stderr)
+        traceback.print_exc()
+
+    daily_activity = None
+    try:
+        daily_activity = select_daily_activity(today)
+    except Exception:
+        print("Daily activity selection failed (non-fatal):", file=sys.stderr)
+        traceback.print_exc()
 
     status = "ok" if len(primary) >= PRIMARY_STORY_COUNT else "partial"
     digest = {
@@ -115,7 +148,9 @@ def main():
         "status": status,
         "stories": primary,
         "moreStories": more,
-        "termOfTheDayCandidateIds": term_of_the_day_candidates(primary + more),
+        "termOfTheDayCandidateIds": candidate_term_ids,
+        "dailyChallenge": daily_challenge,
+        "dailyActivity": daily_activity,
     }
 
     write_json(LATEST_PATH, digest)
@@ -126,6 +161,13 @@ def main():
     index.append({"digestDate": today, "storyCount": len(primary)})
     index.sort(key=lambda e: e["digestDate"], reverse=True)
     write_json(ARCHIVE_INDEX_PATH, index)
+
+    try:
+        count = write_search_index()
+        print(f"  [search-index] wrote {count} entries")
+    except Exception:
+        print("Search index generation failed (non-fatal):", file=sys.stderr)
+        traceback.print_exc()
 
     print(f"\nDigest for {today}: {len(primary)} stories (+{len(more)} more available), status={status}")
     print(f"Wrote {LATEST_PATH}, archive/{today}.json, and archive-index.json")
