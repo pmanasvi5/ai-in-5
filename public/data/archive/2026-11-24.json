@@ -1,8 +1,8 @@
 {
   "digestDate": "2026-11-24",
   "editorialTimezone": "America/New_York",
-  "generatedAt": "2026-11-25T00:25:37.085998+00:00",
-  "lastSuccessfulUpdate": "2026-11-25T00:25:37.086018+00:00",
+  "generatedAt": "2026-11-25T00:27:16.961398+00:00",
+  "lastSuccessfulUpdate": "2026-11-25T00:27:16.961410+00:00",
   "status": "ok",
   "stories": [
     {
@@ -12,7 +12,7 @@
       "originalUrl": "https://www.technologyreview.com/2026/11/24/1149669/the-download-data-centers-gas-ai-consciousness/",
       "category": "New Models",
       "publishedAt": "2026-11-24T13:10:00+00:00",
-      "fetchedAt": "2026-11-25T00:25:36.612781+00:00",
+      "fetchedAt": "2026-11-25T00:27:16.568034+00:00",
       "quickScoop": "Data centers are getting their own natural gas power plants One of the biggest obstacles to building a data center is getting approval to connect to the grid, a wait that could last as long as a decade.",
       "summary": [
         "Some developers won\u2019t wait and are instead building their own off-grid gas power plants to fuel\u2026",
@@ -34,7 +34,7 @@
       "originalUrl": "https://www.technologyreview.com/2026/11/24/1149622/data-centers-natural-gas/",
       "category": "Policy & Regulation",
       "publishedAt": "2026-11-24T11:00:00+00:00",
-      "fetchedAt": "2026-11-25T00:25:36.613451+00:00",
+      "fetchedAt": "2026-11-25T00:27:16.568530+00:00",
       "quickScoop": "One of the biggest roadblocks to starting up a data center is getting approval to connect to the electric grid\u2014a wait that could last as long as a decade.",
       "summary": [
         "Some developers aren\u2019t willing to wait and are instead opting to build their own off-grid, or\u2026",
@@ -56,7 +56,7 @@
       "originalUrl": "https://www.technologyreview.com/2026/11/24/1148091/raising-the-stakes-for-enterprise-networks-with-ai-modernization/",
       "category": "Policy & Regulation",
       "publishedAt": "2026-11-24T15:15:16+00:00",
-      "fetchedAt": "2026-11-25T00:25:36.612136+00:00",
+      "fetchedAt": "2026-11-25T00:27:16.567546+00:00",
       "quickScoop": "Enterprise networks are under severe strain. As companies rush to deploy artificial intelligence, the technology is quickly becoming the biggest source of demand on the network.",
       "summary": [
         "Now, agentic AI is adding to the load.",
@@ -79,7 +79,7 @@
       "originalUrl": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
       "category": "Policy & Regulation",
       "publishedAt": "2026-11-24T17:17:09+00:00",
-      "fetchedAt": "2026-11-25T00:25:36.466158+00:00",
+      "fetchedAt": "2026-11-25T00:27:16.284133+00:00",
       "quickScoop": "Tidal is officially banning AI-generated music on December 9th. As a result of this change, Tidal will delete around 29 million AI-generated songs and reject an estimated 80,000 to 85,000 tracks per day, according to Tidal music lead Robert Andersen.",
       "summary": [
         "The move comes just months after Tidal began labeling and demonetizing tracks identified as 100 percent\u2026",
@@ -96,7 +96,7 @@
       "originalUrl": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
       "category": "Business & Work",
       "publishedAt": "2026-11-24T20:02:03+00:00",
-      "fetchedAt": "2026-11-25T00:25:36.465982+00:00",
+      "fetchedAt": "2026-11-25T00:27:16.284007+00:00",
       "quickScoop": "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports\u2026",
       "summary": [
         "During the meeting, Huang reportedly called claims that President Donald Trump was directly involved in his\u2026",
@@ -115,7 +115,7 @@
       "originalUrl": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
       "category": "Company News",
       "publishedAt": "2026-11-24T16:30:00+00:00",
-      "fetchedAt": "2026-11-25T00:25:36.466229+00:00",
+      "fetchedAt": "2026-11-25T00:27:16.284187+00:00",
       "quickScoop": "Jensen Huang is partying it up in Ibiza. In a video with nearly 6 million views on Instagram, the former CEO of Nvidia is dancing in a crowded club, champagne glass in hand, still wearing his signature black leather jacket.",
       "summary": [
         "Suddenly, from behind him, Alice Huang - the Chinese technology executive and suspected spy he had\u2026",
@@ -133,7 +133,7 @@
       "originalUrl": "https://www.technologyreview.com/2026/11/23/1149548/the-download-ai-judgment-problem-carbon-removal-crop-threat/",
       "category": "Policy & Regulation",
       "publishedAt": "2026-11-23T13:10:00+00:00",
-      "fetchedAt": "2026-11-25T00:25:36.614611+00:00",
+      "fetchedAt": "2026-11-25T00:27:16.569431+00:00",
       "quickScoop": "The most misunderstood graph in AI just got a major update A new report from the AI evaluation nonprofit METR finds that some capabilities are improving exponentially\u2014but models aren\u2019t as good at tasks that require judgment as they are at\u2026",
       "summary": [
         "The report updates METR\u2019s widely shared time horizon plot, which tested models on a large suite\u2026",
@@ -153,7 +153,7 @@
       "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang",
       "category": "Company News",
       "publishedAt": "2026-11-23T22:10:32+00:00",
-      "fetchedAt": "2026-11-25T00:25:36.466963+00:00",
+      "fetchedAt": "2026-11-25T00:27:16.284771+00:00",
       "quickScoop": "After the leather-jacketed CEO, president, and co-founder of Nvidia, Jensen Huang, acknowledged an affair with Megaspeed exec Alice Huang, his company initially announced an investigation.",
       "summary": [
         "However, after The New York Times reported there was evidence of another affair, this time with\u2026",
@@ -173,7 +173,7 @@
       "originalUrl": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
       "category": "Safety & Security",
       "publishedAt": "2026-11-23T17:36:08+00:00",
-      "fetchedAt": "2026-11-25T00:25:36.614009+00:00",
+      "fetchedAt": "2026-11-25T00:27:16.568978+00:00",
       "quickScoop": "Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing. Given \u201cthe way we approach model sentience and moral status,\u201d Anthropic wrote\u2014which is to say it takes\u2026",
       "summary": [
         "Anthropic counts a number of respected philosophers in its camp, and the company\u2019s rationale goes something\u2026",
@@ -193,7 +193,7 @@
       "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/1040819/welcome-to-elite-impunity-jensen-huang",
       "category": "Health & Education",
       "publishedAt": "2026-11-23T22:09:26+00:00",
-      "fetchedAt": "2026-11-25T00:25:36.467039+00:00",
+      "fetchedAt": "2026-11-25T00:27:16.284832+00:00",
       "quickScoop": "Too big to fail, the sequel. | Image: The Verge; Getty Images I suppose I must issue a hearty congratulations to Jensen Huang. Huang is CEO of Nvidia again, to the surprise of basically everyone except President Donald Trump and\u2026",
       "summary": [
         "Now, those of us who had some kind of basic education on what a \"free market\"\u2026",
