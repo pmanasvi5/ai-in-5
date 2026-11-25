@@ -1,14 +1,20 @@
 import { useState } from 'react'
 import { RefreshCw, WifiOff, AlertTriangle, ArrowDown, Sparkles } from 'lucide-react'
-import type { DailyDigest, GlossaryTerm } from '../types'
-import { formatDigestDate, formatRelativeUpdate } from '../utils/date'
+import type { DailyDigest, GlossaryTerm, LearnedTermRecord } from '../types'
+import { formatDigestDate, formatRelativeUpdate, editorialToday } from '../utils/date'
 import { NewsCard } from '../components/NewsCard'
 import { NewsCardSkeleton } from '../components/Skeleton'
 import { EmptyState } from '../components/EmptyState'
 import { TermOfTheDayCard } from '../components/TermOfTheDayCard'
-import { ReadingProgress } from '../components/ReadingProgress'
+import { DailyJourneyProgress } from '../components/DailyJourneyProgress'
+import { DailyChallengeCard } from '../components/DailyChallengeCard'
+import { DailyActivityCard } from '../components/DailyActivityCard'
+import { AudioBriefingPlayer } from '../components/AudioBriefingPlayer'
 import { useOnlineStatus } from '../hooks/useOnlineStatus'
 import { useReadTracking } from '../hooks/useReadTracking'
+import { useChallengeProgress } from '../hooks/useChallengeProgress'
+import { useActivityProgress } from '../hooks/useActivityProgress'
+import { useDailyJourneyMilestone } from '../hooks/useDailyJourneyMilestone'
 
 interface TodayPageProps {
   digest: DailyDigest | null
@@ -19,6 +25,7 @@ interface TodayPageProps {
   onToggleBookmark: (storyId: string) => void
   featuredTerm: GlossaryTerm | null
   onGotIt: (termId: string) => void
+  learnedTerms: LearnedTermRecord[]
 }
 
 function greeting(): string {
@@ -37,12 +44,30 @@ export function TodayPage({
   onToggleBookmark,
   featuredTerm,
   onGotIt,
+  learnedTerms,
 }: TodayPageProps) {
   const online = useOnlineStatus()
   const [showMore, setShowMore] = useState(false)
   const { readIds, markRead } = useReadTracking(digest?.digestDate)
+  const { answer: challengeAnswer, submitAnswer } = useChallengeProgress(digest?.digestDate)
+  const { completedIds: completedActivityIds, markDone, markNotDone } = useActivityProgress()
   const totalReadingTime = digest?.stories.reduce((sum, s) => sum + s.readingTimeMinutes, 0) ?? 0
   const moreStories = digest?.moreStories ?? []
+
+  const vocabDoneToday = learnedTerms.some((t) => t.learnedAt.startsWith(editorialToday()))
+  const challengeDone = !!challengeAnswer
+  const activityDone = digest?.dailyActivity ? completedActivityIds.has(digest.dailyActivity.id) : false
+  const storiesDone = !!digest && digest.stories.length > 0 && readIds.size >= digest.stories.length
+
+  const journeyStages = digest
+    ? [
+        { label: 'Read your five', done: storiesDone },
+        { label: 'Learn something new', done: vocabDoneToday },
+        { label: "Try today's challenge", done: challengeDone },
+        { label: 'AI in Real Life', done: activityDone },
+      ]
+    : []
+  useDailyJourneyMilestone(journeyStages.length > 0 && journeyStages.every((s) => s.done))
 
   function scrollToStories() {
     document.getElementById('todays-stories')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
@@ -63,16 +88,18 @@ export function TodayPage({
           </button>
         </div>
         <p className="text-muted-light dark:text-muted-dark text-lg">
-          Here's what's happening in AI today — explained like a friend would tell you over coffee.
+          Five stories. One new concept. A few minutes a day.
         </p>
         {digest && (
-          <div className="flex flex-wrap items-center justify-between gap-y-2 mt-1">
-            <p className="text-sm text-muted-light dark:text-muted-dark">
-              {formatDigestDate(digest.digestDate)} · {digest.stories.length}{' '}
-              {digest.stories.length === 1 ? 'story' : 'stories'}
-              {totalReadingTime > 0 && ` · ~${totalReadingTime} min read`}
-            </p>
-            <ReadingProgress read={readIds.size} total={digest.stories.length} />
+          <p className="text-sm text-muted-light dark:text-muted-dark mt-1">
+            {formatDigestDate(digest.digestDate)} · {digest.stories.length}{' '}
+            {digest.stories.length === 1 ? 'story' : 'stories'}
+            {totalReadingTime > 0 && ` · ~${totalReadingTime} min read`}
+          </p>
+        )}
+        {journeyStages.length > 0 && (
+          <div className="mt-2">
+            <DailyJourneyProgress stages={journeyStages} />
           </div>
         )}
         {digest && digest.stories.length > 0 && (
@@ -85,6 +112,8 @@ export function TodayPage({
           </button>
         )}
       </section>
+
+      {digest && digest.stories.length > 0 && <AudioBriefingPlayer digest={digest} />}
 
       {!online && (
         <div className="flex items-center gap-2 rounded-xl bg-amber-light dark:bg-amber/10 px-4 py-3 text-sm">
@@ -170,6 +199,19 @@ export function TodayPage({
               />
             ))}
         </div>
+      )}
+
+      {digest?.dailyChallenge && (
+        <DailyChallengeCard challenge={digest.dailyChallenge} savedAnswer={challengeAnswer} onAnswer={submitAnswer} />
+      )}
+
+      {digest?.dailyActivity && (
+        <DailyActivityCard
+          activity={digest.dailyActivity}
+          done={activityDone}
+          onMarkDone={() => markDone(digest.dailyActivity!.id)}
+          onMarkNotDone={() => markNotDone(digest.dailyActivity!.id)}
+        />
       )}
     </div>
   )

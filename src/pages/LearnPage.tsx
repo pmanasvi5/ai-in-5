@@ -6,6 +6,10 @@ import { ProgressBar } from '../components/ProgressBar'
 import { GlossaryCard } from '../components/GlossaryCard'
 import { EmptyState } from '../components/EmptyState'
 import { TermCardSkeleton } from '../components/Skeleton'
+import { LearningDashboard } from '../components/LearningDashboard'
+import { useChallengeProgress } from '../hooks/useChallengeProgress'
+import { useActivityProgress } from '../hooks/useActivityProgress'
+import { useDailyJourneyMilestone } from '../hooks/useDailyJourneyMilestone'
 
 interface LearnPageProps {
   glossary: GlossaryTerm[]
@@ -42,6 +46,9 @@ export function LearnPage({
   const [query, setQuery] = useState('')
   const [importMessage, setImportMessage] = useState<string | null>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
+  const { completedCount: challengesCompleted } = useChallengeProgress(undefined)
+  const { completedCount: activitiesCompleted } = useActivityProgress()
+  const everCompletedFullBriefing = useDailyJourneyMilestone(false)
 
   const filtered = useMemo(() => {
     const sorted = [...glossary].sort((a, b) => a.term.localeCompare(b.term))
@@ -108,6 +115,13 @@ export function LearnPage({
       )}
 
       <ProgressBar current={learnedCount} total={totalCount} />
+
+      <LearningDashboard
+        termsLearned={learnedCount}
+        challengesCompleted={challengesCompleted}
+        activitiesCompleted={activitiesCompleted}
+        everCompletedFullBriefing={everCompletedFullBriefing}
+      />
 
       <div className="flex items-center gap-2">
         <button

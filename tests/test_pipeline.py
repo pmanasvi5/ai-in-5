@@ -154,5 +154,93 @@ class TestGlossaryDiscovery(unittest.TestCase):
         self.assertEqual(len(seed_pool), 1)
 
 
+class TestStoryLinking(unittest.TestCase):
+    def test_extracts_multiword_entities(self):
+        from story_linking import extract_entities
+
+        entities = extract_entities("Jensen Huang announced a new Nvidia chip at the event")
+        self.assertIn("jensen huang", entities)
+
+    def test_extracts_known_single_word_entities(self):
+        from story_linking import extract_entities
+
+        entities = extract_entities("OpenAI released a new model today")
+        self.assertIn("openai", entities)
+
+    def test_does_not_link_unrelated_stories(self):
+        from story_linking import find_previous_mentions
+
+        story = {
+            "headline": "A new chip design improves efficiency",
+            "quickScoop": "Researchers unveiled a new chip architecture this week.",
+            "category": "Research",
+        }
+        # No archive on disk in the test environment -> nothing to match against.
+        mentions = find_previous_mentions(story, "2099-01-01")
+        self.assertEqual(mentions, [])
+
+    def test_does_not_treat_near_duplicate_as_a_followup(self):
+        from story_linking import _headline_similarity, MAX_HEADLINE_SIMILARITY
+
+        sim = _headline_similarity(
+            "OpenAI launches GPT-6 today", "OpenAI Launches GPT-6 Today"
+        )
+        self.assertGreaterEqual(sim, MAX_HEADLINE_SIMILARITY)
+
+
+class TestEnrichment(unittest.TestCase):
+    GLOSSARY = [
+        {"id": "a", "term": "Term A", "definition": "Definition A", "everydayExample": "e", "whyItMatters": "w", "relatedTerms": []},
+        {"id": "b", "term": "Term B", "definition": "Definition B", "everydayExample": "e", "whyItMatters": "w", "relatedTerms": []},
+        {"id": "c", "term": "Term C", "definition": "Definition C", "everydayExample": "e", "whyItMatters": "w", "relatedTerms": []},
+        {"id": "d", "term": "Term D", "definition": "Definition D", "everydayExample": "e", "whyItMatters": "w", "relatedTerms": []},
+    ]
+
+    def test_deterministic_challenge_has_valid_structure(self):
+        from enrichment import _deterministic_challenge
+
+        challenge = _deterministic_challenge(self.GLOSSARY, ["a"], "2026-01-01")
+        self.assertIsNotNone(challenge)
+        self.assertEqual(len(challenge["choices"]), 4)
+        self.assertEqual(len(set(challenge["choices"])), 4)  # no duplicate choices
+        self.assertTrue(0 <= challenge["correctIndex"] < 4)
+        self.assertEqual(challenge["choices"][challenge["correctIndex"]], "Definition A")
+
+    def test_deterministic_challenge_is_stable_for_same_date(self):
+        from enrichment import _deterministic_challenge
+
+        first = _deterministic_challenge(self.GLOSSARY, ["a", "b"], "2026-03-01")
+        second = _deterministic_challenge(self.GLOSSARY, ["a", "b"], "2026-03-01")
+        self.assertEqual(first["question"], second["question"])
+        self.assertEqual(first["choices"], second["choices"])
+
+    def test_deterministic_challenge_needs_at_least_four_terms(self):
+        from enrichment import _deterministic_challenge
+
+        self.assertIsNone(_deterministic_challenge(self.GLOSSARY[:2], ["a"], "2026-01-01"))
+
+    def test_activity_selection_rotates_deterministically(self):
+        from enrichment import select_daily_activity
+
+        first = select_daily_activity("2026-01-01")
+        second = select_daily_activity("2026-01-01")
+        self.assertEqual(first["id"], second["id"])  # stable for the same date
+
+    def test_extractive_simplify_prefers_shorter_sentence(self):
+        from enrichment import _extractive_simplify
+
+        text = (
+            "The company announced a sweeping new initiative involving multiple complex technical partnerships. "
+            "It is free."
+        )
+        result = _extractive_simplify(text)
+        self.assertEqual(result, "It is free.")
+
+    def test_extractive_simplify_returns_none_for_single_sentence(self):
+        from enrichment import _extractive_simplify
+
+        self.assertIsNone(_extractive_simplify("Just one sentence here."))
+
+
 if __name__ == "__main__":
     unittest.main()

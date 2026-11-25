@@ -61,6 +61,7 @@ export default function App() {
               onToggleBookmark={handleToggleBookmark}
               featuredTerm={featuredTerm}
               onGotIt={markGotIt}
+              learnedTerms={progress.learnedTerms}
             />
           }
         />
