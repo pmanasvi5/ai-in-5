@@ -1,0 +1,248 @@
+{
+  "digestDate": "2026-11-25",
+  "editorialTimezone": "America/New_York",
+  "generatedAt": "2026-11-25T15:23:56.731915+00:00",
+  "lastSuccessfulUpdate": "2026-11-25T15:23:56.731930+00:00",
+  "status": "ok",
+  "stories": [
+    {
+      "id": "the-download-ai-swamping-open-records-and-firefighting-for-p",
+      "headline": "The Download: AI swamping open records, and firefighting for permafrost",
+      "source": "MIT Technology Review",
+      "originalUrl": "https://www.technologyreview.com/2026/11/25/1149808/the-download-ai-open-records-permafrost-fires/",
+      "category": "New Models",
+      "publishedAt": "2026-11-25T13:10:00+00:00",
+      "fetchedAt": "2026-11-25T15:23:56.426233+00:00",
+      "quickScoop": "AI is straining America\u2019s open records systems AI has intensified investors\u2019 interest in public records. Over the last few years, venture-backed startups have raised upwards of $100 million to collect data from thousands of agencies and turn it into AI-powered\u2026",
+      "summary": [
+        "At the same time, chatbots are making it easier for individuals to file requests.",
+        "As agencies struggle to tell whether they\u2019re dealing with a citizen, a chatbot, or a sales\u2026",
+        "That could potentially make public offices less transparent.",
+        "Five years later, we followed researchers into the forest to investigate how fighting fires could help\u2026",
+        "Their probe revealed an escalating problem: As climate change fuels more frequent and severe fires, they\u2019re\u2026"
+      ],
+      "whyItMatters": "New models like this tend to show up inside the everyday apps and tools people already use.",
+      "keyTerms": [
+        "chatbot"
+      ],
+      "readingTimeMinutes": 3,
+      "simplerExplanation": "AI is straining America\u2019s open records systems AI has intensified investors\u2019 interest in public records."
+    },
+    {
+      "id": "ai-is-straining-america-s-open-records-systems",
+      "headline": "AI is straining America\u2019s open records systems",
+      "source": "MIT Technology Review",
+      "originalUrl": "https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/",
+      "category": "Policy & Regulation",
+      "publishedAt": "2026-11-25T10:00:00+00:00",
+      "fetchedAt": "2026-11-25T15:23:56.426857+00:00",
+      "quickScoop": "In Panton, Vermont, population 660, town clerk Kyle Rowe did it all. He crafted budgets, paid vendors, handled property tax disputes, and served as the town\u2019s zoning supervisor and presiding elections officer.",
+      "summary": [
+        "During morning office hours at the town hall\u2014a wood-frame structure built as a church in 1858\u2014he\u2026",
+        "Recently, he got rather busy.",
+        "Panton used to get a request every year or so from a company called SmartProcure for\u2026",
+        "Last year, those requests started coming quarterly.",
+        "Then different companies began making more specific requests, like records of every purchase related to emergency\u2026"
+      ],
+      "whyItMatters": "Rules like this shape what AI companies can do, and how much protection the public gets.",
+      "keyTerms": [],
+      "readingTimeMinutes": 3,
+      "simplerExplanation": "In Panton, Vermont, population 660, town clerk Kyle Rowe did it all."
+    },
+    {
+      "id": "the-download-ai-s-gas-power-boom-and-a-consciousness-reality",
+      "headline": "The Download: AI\u2019s gas power boom and a consciousness reality check",
+      "source": "MIT Technology Review",
+      "originalUrl": "https://www.technologyreview.com/2026/11/24/1149669/the-download-data-centers-gas-ai-consciousness/",
+      "category": "New Models",
+      "publishedAt": "2026-11-24T13:10:00+00:00",
+      "fetchedAt": "2026-11-25T15:23:56.427183+00:00",
+      "quickScoop": "Data centers are getting their own natural gas power plants One of the biggest obstacles to building a data center is getting approval to connect to the grid, a wait that could last as long as a decade.",
+      "summary": [
+        "Some developers won\u2019t wait and are instead building their own off-grid gas power plants to fuel\u2026",
+        "As of October 2026, developers had announced plans for more than 100 such gas power plants\u2026",
+        "But bypassing the grid brings its own problems, from worsening climate emissions to potentially higher energy\u2026",
+        "But that stance came under fire from an inconvenient source: one of the philosophers who helped\u2026",
+        "Thomas Nagel, best known for his essay about what it\u2019s like to be a bat, was\u2026"
+      ],
+      "whyItMatters": "New models like this tend to show up inside the everyday apps and tools people already use.",
+      "keyTerms": [
+        "data-center"
+      ],
+      "readingTimeMinutes": 3
+    },
+    {
+      "id": "data-centers-are-getting-their-own-natural-gas-power-plants",
+      "headline": "Data centers are getting their own natural gas power plants",
+      "source": "MIT Technology Review",
+      "originalUrl": "https://www.technologyreview.com/2026/11/24/1149622/data-centers-natural-gas/",
+      "category": "Policy & Regulation",
+      "publishedAt": "2026-11-24T11:00:00+00:00",
+      "fetchedAt": "2026-11-25T15:23:56.427523+00:00",
+      "quickScoop": "One of the biggest roadblocks to starting up a data center is getting approval to connect to the electric grid\u2014a wait that could last as long as a decade.",
+      "summary": [
+        "Some developers aren\u2019t willing to wait and are instead opting to build their own off-grid, or\u2026",
+        "At the time, that facility was a rarity, and it faced scrutiny from regulators.",
+        "It remains the subject of ongoing legal battles.",
+        "But the strategy of going off-grid for power has since become a lot more common.",
+        "As of October 2026, data center developers have announced plans for more than 100 behind-the-meter gas\u2026"
+      ],
+      "whyItMatters": "Rules like this shape what AI companies can do, and how much protection the public gets.",
+      "keyTerms": [
+        "data-center"
+      ],
+      "readingTimeMinutes": 3
+    },
+    {
+      "id": "amazon-is-reportedly-in-talks-to-end-muse-ai-shopping-block",
+      "headline": "Amazon is reportedly in talks to end Muse AI shopping block",
+      "source": "The Verge",
+      "originalUrl": "https://www.theverge.com/tech/1042071/meta-amazon-muse-ai-shopping-discussions",
+      "category": "Business & Work",
+      "publishedAt": "2026-11-25T14:12:33+00:00",
+      "fetchedAt": "2026-11-25T15:23:56.248946+00:00",
+      "quickScoop": "Amazon has held talks about letting Meta's Muse AI agent shop on its online marketplace, according to a report from Fortune. The discussions, which could end Amazon's block on Muse, reportedly center on the kinds of products the AI agent\u2026",
+      "summary": [
+        "As reported by Fortune, Amazon is concerned that it could lose advertising revenue by allowing Muse\u2026",
+        "It's also reportedly worried about the quality of the product search results that Muse will present\u2026"
+      ],
+      "whyItMatters": "Changes like this can ripple into jobs, hiring, and how companies operate, even outside tech.",
+      "keyTerms": [
+        "ai-agent"
+      ],
+      "readingTimeMinutes": 2,
+      "simplerExplanation": "The discussions, which could end Amazon's block on Muse, reportedly center on the kinds of products the AI agent\u2026"
+    }
+  ],
+  "moreStories": [
+    {
+      "id": "has-vibe-coding-made-open-source-the-new-normal-for-synths",
+      "headline": "Has vibe coding made open source the new normal for synths?",
+      "source": "The Verge",
+      "originalUrl": "https://www.theverge.com/ai-artificial-intelligence/1040081/vibe-coding-open-source-music-firmware",
+      "category": "New Models",
+      "publishedAt": "2026-11-25T13:00:00+00:00",
+      "fetchedAt": "2026-11-25T15:23:56.248996+00:00",
+      "quickScoop": "The emergence of powerful vibe-coding agents and tools like Reverse Engineer Anything has caused chaos in the music gear world, leaving companies scrambling to figure out how to respond.",
+      "summary": [
+        "While some, like Roland, have remained silent for now, others have embraced the modding community.",
+        "In the last several weeks, as it's become clear that no piece of music gear is\u2026",
+        "The biggest name to decide \"if you can't beat 'em, join 'em\" is inMusic, the parent\u2026"
+      ],
+      "whyItMatters": "New models like this tend to show up inside the everyday apps and tools people already use.",
+      "keyTerms": [],
+      "readingTimeMinutes": 2
+    },
+    {
+      "id": "tidal-will-start-banning-ai-generated-music-next-month",
+      "headline": "Tidal will start banning AI-generated music next month",
+      "source": "The Verge",
+      "originalUrl": "https://www.theverge.com/entertainment/1041362/tidal-ai-music-ban",
+      "category": "Policy & Regulation",
+      "publishedAt": "2026-11-24T17:17:09+00:00",
+      "fetchedAt": "2026-11-25T15:23:56.249130+00:00",
+      "quickScoop": "Tidal is officially banning AI-generated music on December 9th. As a result of this change, Tidal will delete around 29 million AI-generated songs and reject an estimated 80,000 to 85,000 tracks per day, according to Tidal music lead Robert Andersen.",
+      "summary": [
+        "The move comes just months after Tidal began labeling and demonetizing tracks identified as 100 percent\u2026",
+        "In a post on X, Andersen says Tidal needed to take a more \"drastic\" measure, as\u2026"
+      ],
+      "whyItMatters": "Rules like this shape what AI companies can do, and how much protection the public gets.",
+      "keyTerms": [],
+      "readingTimeMinutes": 2,
+      "simplerExplanation": "Tidal is officially banning AI-generated music on December 9th."
+    },
+    {
+      "id": "jensen-huang-reportedly-tells-nvidia-staff-it-s-not-true-tru",
+      "headline": "Jensen Huang reportedly tells Nvidia staff it\u2019s \u2018not true\u2019 Trump got him rehired",
+      "source": "The Verge",
+      "originalUrl": "https://www.theverge.com/tech/1041571/jensen-huang-all-hands-nvidia-apology",
+      "category": "Business & Work",
+      "publishedAt": "2026-11-24T20:02:03+00:00",
+      "fetchedAt": "2026-11-25T15:23:56.249049+00:00",
+      "quickScoop": "Nvidia CEO Jensen Huang apologized to staff during his first all-hands since returning to the company, while attempting to distance himself from the narrative that the White House and tech leaders helped him get his job back, according to reports\u2026",
+      "summary": [
+        "During the meeting, Huang reportedly called claims that President Donald Trump was directly involved in his\u2026",
+        "We are the most apolitical company,\" according to Kabas."
+      ],
+      "whyItMatters": "Changes like this can ripple into jobs, hiring, and how companies operate, even outside tech.",
+      "keyTerms": [],
+      "readingTimeMinutes": 2
+    },
+    {
+      "id": "jensen-huang-deepfakes-are-the-hot-new-ai-slop",
+      "headline": "Jensen Huang deepfakes are the hot new AI slop",
+      "source": "The Verge",
+      "originalUrl": "https://www.theverge.com/tech/1041222/jensen-huang-nvidia-scandal-deepfakes",
+      "category": "Company News",
+      "publishedAt": "2026-11-24T16:30:00+00:00",
+      "fetchedAt": "2026-11-25T15:23:56.249168+00:00",
+      "quickScoop": "Jensen Huang is partying it up in Ibiza. In a video with nearly 6 million views on Instagram, the former CEO of Nvidia is dancing in a crowded club, champagne glass in hand, still wearing his signature black leather jacket.",
+      "summary": [
+        "Suddenly, from behind him, Alice Huang - the Chinese technology executive and suspected spy he had\u2026",
+        "She puts her hand on his shoulder and he wraps his arm around her waist as\u2026",
+        "The video's caption reads \"Honey Trap Final Boss. #inthemoodforlove.\" Of course, it's AI-genera..."
+      ],
+      "whyItMatters": "Moves by major AI companies shape which products get built, funded, and widely adopted next.",
+      "keyTerms": [],
+      "readingTimeMinutes": 2,
+      "previousMentions": [
+        {
+          "date": "2026-11-24",
+          "headline": "Nvidia CEO Jensen Huang is back. What happens next?",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1030422/nvidia-jensen-huang-ai-china-alice-huang"
+        }
+      ],
+      "followUpLabel": "New Development",
+      "threadId": "nvidia-ceo-jensen-huang-is-back-what-happens-next",
+      "simplerExplanation": "Jensen Huang is partying it up in Ibiza."
+    },
+    {
+      "id": "a-legendary-philosopher-isn-t-buying-anthropic-s-consciousne",
+      "headline": "A legendary philosopher isn\u2019t buying Anthropic\u2019s consciousness argument",
+      "source": "MIT Technology Review",
+      "originalUrl": "https://www.technologyreview.com/2026/11/23/1149569/a-legendary-philosopher-isnt-buying-anthropics-consciousness-argument/",
+      "category": "Safety & Security",
+      "publishedAt": "2026-11-23T17:36:08+00:00",
+      "fetchedAt": "2026-11-25T15:23:56.427822+00:00",
+      "quickScoop": "Before going public last week, Anthropic named the possibility that AI could be conscious or sentient as a risk factor for anyone investing. Given \u201cthe way we approach model sentience and moral status,\u201d Anthropic wrote\u2014which is to say it takes\u2026",
+      "summary": [
+        "Anthropic counts a number of respected philosophers in its camp, and the company\u2019s rationale goes something\u2026",
+        "This thinking isn\u2019t all that fringe.",
+        "According to one recent poll, 33% of the US public believes AI systems will definitely or\u2026",
+        "In a 2020 survey of 1,092 philosophers, 39% said some future AI systems will be conscious\u2026",
+        "But last week, Anthropic\u2019s openness to the consciousness question came under fire from a rather inconvenient\u2026"
+      ],
+      "whyItMatters": "Safety issues like this affect how much people can trust AI with sensitive tasks and decisions.",
+      "keyTerms": [],
+      "readingTimeMinutes": 3,
+      "simplerExplanation": "Given \u201cthe way we approach model sentience and moral status,\u201d Anthropic wrote\u2014which is to say it takes\u2026"
+    }
+  ],
+  "termOfTheDayCandidateIds": [
+    "chatbot",
+    "data-center",
+    "ai-agent"
+  ],
+  "dailyChallenge": {
+    "id": "challenge-2026-11-25",
+    "digestDate": "2026-11-25",
+    "question": "Which of these is the best definition of \"Chatbot\"?",
+    "choices": [
+      "A defined way for one piece of software to request information or services from another, like a menu of actions one program offers to others.",
+      "A software program designed to hold a conversation with a person, often using text or voice.",
+      "The branch of AI focused on helping computers understand and interpret images and video.",
+      "A type of machine learning that uses many layers of connected calculations, loosely inspired by how neurons in the brain pass signals, to find patterns in large amounts of data."
+    ],
+    "correctIndex": 1,
+    "explanation": "A software program designed to hold a conversation with a person, often using text or voice. Chatbots are one of the most common, everyday ways people directly interact with AI today.",
+    "sourceTermId": "chatbot"
+  },
+  "dailyActivity": {
+    "id": "generate-practice-questions",
+    "title": "Create your own practice test",
+    "learningObjective": "How to generate targeted practice material for an exam.",
+    "tryThis": "Based on these topics I need to study: [list them], write 5 practice questions at a moderate difficulty, with an answer key.",
+    "whyItWorks": "Practice testing is one of the most effective study techniques, and AI can generate unlimited fresh questions.",
+    "category": "school"
+  }
+}
