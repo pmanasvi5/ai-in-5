@@ -1,0 +1,73 @@
+{
+  "digestDate": "2026-11-28",
+  "editorialTimezone": "America/New_York",
+  "generatedAt": "2026-11-28T13:59:10.899945+00:00",
+  "lastSuccessfulUpdate": "2026-11-28T13:59:10.899955+00:00",
+  "status": "partial",
+  "stories": [
+    {
+      "id": "the-download-innovators-under-35-nominations-are-open-and-a",
+      "headline": "The Download: Innovators Under 35 nominations are open, and a bionic window into the mind",
+      "source": "MIT Technology Review",
+      "originalUrl": "https://www.technologyreview.com/2026/11/27/1149960/the-download-the-download-innovators-under-35-nominations-bionic-hand/",
+      "category": "Research",
+      "publishedAt": "2026-11-27T13:00:00+00:00",
+      "fetchedAt": "2026-11-28T13:59:10.700870+00:00",
+      "quickScoop": "Our 2027 Innovators Under 35 competition is now open Every year, MIT Technology Review honors 35 of the world\u2019s brightest young scientists, entrepreneurs, and inventors in our Innovators Under 35 list.",
+      "summary": [
+        "And starting today, our 2027 competition is officially open for nominations.",
+        "We\u2019re on the hunt for researchers and founders who are engineering solutions to society\u2019s most formidable\u2026",
+        "We also recognize those who have made clever and useful inventions, important new scientific discoveries, or\u2026",
+        "Nominees can be based anywhere in the world, but must be under 35 on October 1\u2026",
+        "Have someone in mind?"
+      ],
+      "whyItMatters": "Research like this often takes years to reach real products, but it signals where AI is headed.",
+      "keyTerms": [],
+      "readingTimeMinutes": 3
+    },
+    {
+      "id": "android-s-diy-widgets-are-a-bit-of-vibe-coding-fun",
+      "headline": "Android\u2019s DIY widgets are a bit of vibe-coding fun",
+      "source": "The Verge",
+      "originalUrl": "https://www.theverge.com/tech/1041801/android-intelligence-create-my-widget-gemini",
+      "category": "Tools & Apps",
+      "publishedAt": "2026-11-27T14:00:00+00:00",
+      "fetchedAt": "2026-11-28T13:59:10.514697+00:00",
+      "quickScoop": "Widgets, your way. | Photo: Allison Johnson / The Verge Aside from dealing with my calendar, there's one thing I want AI to do: tell me if I'm about to miss the bus.",
+      "summary": [
+        "What I need is a widget.",
+        "It needs to tell me real-time arrivals for the bus stop near my house.",
+        "Tapping around on my phone screen to open the right app and select my stop will\u2026",
+        "I need glanceable information, and I hoped that Android's vibe-coded widget feature could help me out\u2026",
+        "It hasn't, to my disappointment, but I still had a good time cooking up other widgets."
+      ],
+      "whyItMatters": "Tools like this change what ordinary people and workers can do day to day, no technical skill required.",
+      "keyTerms": [],
+      "readingTimeMinutes": 3
+    }
+  ],
+  "moreStories": [],
+  "termOfTheDayCandidateIds": [],
+  "dailyChallenge": {
+    "id": "challenge-2026-11-28",
+    "digestDate": "2026-11-28",
+    "question": "Which of these is the best definition of \"AI Hallucination\"?",
+    "choices": [
+      "When an AI system confidently states information that is false, made up, or not actually supported by its sources.",
+      "An AI technique that determines whether a piece of text expresses a positive, negative, or neutral feeling.",
+      "The internal numerical settings a neural network adjusts during training; roughly, the \"knowledge dials\" that get tuned as the model learns.",
+      "Technology that lets computers do things that normally need human thinking, like understanding language, recognizing images, or making decisions."
+    ],
+    "correctIndex": 0,
+    "explanation": "When an AI system confidently states information that is false, made up, or not actually supported by its sources. Hallucinations are a key reason experts recommend double-checking important facts an AI gives you.",
+    "sourceTermId": "ai-hallucination"
+  },
+  "dailyActivity": {
+    "id": "plan-a-study-schedule",
+    "title": "Plan a study schedule that actually fits your week",
+    "learningObjective": "How to turn a vague study goal into a concrete plan.",
+    "tryThis": "I have [exam/topic] in [X days] and about [Y hours] a week free. Break this into a day-by-day study plan with specific tasks.",
+    "whyItWorks": "AI is good at breaking a big, fuzzy goal into small, scheduled steps once you give it real constraints.",
+    "category": "school"
+  }
+}
